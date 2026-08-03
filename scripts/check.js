@@ -8,7 +8,8 @@ import path from "node:path";
 import yaml from "js-yaml";
 
 const DATA_DIR = "src/_data";
-const LISTS = ["scholarship", "reports", "commentary", "media", "projects"];
+const LISTS = ["articles", "reports", "commentary", "media", "projects"];
+const IMG_DIR = "src/assets/img";
 const problems = [];
 const warnings = [];
 
@@ -50,8 +51,11 @@ for (const name of LISTS) {
     }
     if (entry.featured !== undefined && typeof entry.featured !== "boolean")
       fail(file, `${label} has "featured: ${entry.featured}" — it must be true or false, with no quotes.`);
-    if (name === "media" && entry.kind && !["press", "talk", "profile"].includes(entry.kind))
-      fail(file, `${label} has kind "${entry.kind}" — must be press, talk, or profile.`);
+    if (name === "media" && !["press", "talk", "affiliation"].includes(entry.kind))
+      fail(file, `${label} has kind "${entry.kind}" — must be press, talk, or affiliation.`);
+    if (entry.image && !fs.existsSync(path.join(IMG_DIR, entry.image)))
+      fail(file, `${label} points at image "${entry.image}", which isn't in ${IMG_DIR}/.`);
+    if (!entry.image) warn(file, `${label} has no "image", so it will show an empty grey tile.`);
   });
 }
 

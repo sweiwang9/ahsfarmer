@@ -1,18 +1,37 @@
 ---
 layout: base.njk
+fullBleed: true
 ---
 <div class="hero">
-  <h1>{{ site.name }}</h1>
-  <p class="tagline">{{ site.tagline }}</p>
-  <p class="intro">{{ site.intro }}</p>
+  <div class="wrap">
+    <h1>{{ site.name }}</h1>
+    <p class="tagline">{{ site.tagline }}</p>
+    <p class="themes">{{ site.themes }}</p>
+  </div>
 </div>
 
-<h2 class="section-heading">Selected work</h2>
-{% set entries = scholarship | featured | concat(reports | featured, commentary | featured) %}
+<div class="wrap">
+
+<h2 class="section-heading">Latest</h2>
+{% set entries = articles | featured | withLabel("Articles") | concat(
+                 reports | featured | withLabel("Reports"),
+                 commentary | featured | withLabel("Commentary")) %}
+{% set showYears = false %}
 {% include "entry-list.njk" %}
 
 <h2 class="section-heading">In progress</h2>
-{% set entries = projects | featured %}
+{% set entries = projects | featured | withLabel("Project") %}
 {% include "entry-list.njk" %}
 
+<h2 class="section-heading">About Alice</h2>
+<div class="about-block">
+  {% for para in site.about %}<p>{{ para }}</p>{% endfor %}
+  <div class="buttons">
+    <a class="btn btn-solid" href="{{ '/about/' | url }}">Read full bio</a>
+    {% if site.email %}<a class="btn btn-ghost" href="mailto:{{ site.email }}">Get in touch</a>{% endif %}
+  </div>
+</div>
+
 <p class="currently">{{ site.currently }}</p>
+
+</div>

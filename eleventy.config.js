@@ -43,6 +43,11 @@ export default function (eleventyConfig) {
     entries.filter((entry) => entry.featured)
   );
 
+  // Tag each entry with the section it came from, for the "Latest" list on the home page.
+  eleventyConfig.addFilter("withLabel", (entries = [], label) =>
+    entries.map((entry) => ({ ...entry, label }))
+  );
+
   return {
     // "/" locally and on a custom domain; "/ahsfarmer/" on the GitHub project page.
     // Set by the deploy workflow. This is the only thing that changes at domain cutover.

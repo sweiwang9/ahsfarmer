@@ -1,14 +1,25 @@
-# Site-wide settings. Edit the tagline and bio here.
+# Site-wide settings. Edit the tagline, themes and bio here.
 name: "Alice Hamilton Farmer"
-tagline: "Refugee Lawyer . Researcher . Writer"
+tagline: "Refugee Lawyer · Researcher · Writer"
 description: "Alice Hamilton Farmer is an international lawyer working on refugee law, forced displacement and climate mobility."
 
-# Shown on the home page under the name.
-intro: >
-  I am an international lawyer. For twenty years I have worked on refugee protection —
-  with Human Rights Watch, the Norwegian Refugee Council and the UN Refugee Agency — in
-  settings from Liberia to Moldova to the US southern border. My current research asks how
-  climate change is reshaping the legal framework of forced displacement.
+# The line under the name on the home page. Keep the middle dots.
+themes: "Climate displacement · Coastal communities · Refugee protection ·"
+
+# Home page biography. Each item is one paragraph.
+about:
+  - >
+    Alice Hamilton Farmer is an international lawyer. For twenty years she has worked on
+    refugee protection and the rights of people in displacement — in refugee camps,
+    detention centres and courtrooms.
+  - >
+    Until January 2024 she was head of the United States legal team for UNHCR, the UN
+    Refugee Agency, where she represented the agency before the US Supreme Court and the
+    federal courts of appeals, and served as its focal point for climate change.
+  - >
+    Her current research asks how climate change is reshaping the legal framework of
+    forced displacement, with a focus on small-scale fishing communities and other coastal
+    populations living with slow-onset loss.
 
 # One line, updated occasionally. Shown at the bottom of the home page.
 currently: >
@@ -16,11 +27,10 @@ currently: >
   Stanford, and building a proof of concept for a climate change law lab.
 
 email: ""            # leave empty to hide the contact link
-twitter: "ahsfarmer"
 linkedin: "https://www.linkedin.com/in/alice-farmer-8920979/"
 
 nav:
-  - { text: "Scholarship", url: "/scholarship/" }
+  - { text: "Articles", url: "/articles/" }
   - { text: "Reports", url: "/reports/" }
   - { text: "Commentary", url: "/commentary/" }
   - { text: "Media", url: "/media/" }

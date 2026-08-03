@@ -33,16 +33,16 @@
   </div>
 </header>
 
-<main id="main" class="wrap">
+<main id="main"{% if not fullBleed %} class="wrap"{% endif %}>
 {{ content | safe }}
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
+    <span class="wordmark-footer">{{ site.name }}</span>
     <p>&copy; <span id="year">2026</span> {{ site.name }}</p>
     <p class="footer-links">
       {% if site.email %}<a href="mailto:{{ site.email }}">Email</a>{% endif %}
-      {% if site.twitter %}<a href="https://x.com/{{ site.twitter }}">@{{ site.twitter }}</a>{% endif %}
       {% if site.linkedin %}<a href="{{ site.linkedin }}">LinkedIn</a>{% endif %}
     </p>
   </div>

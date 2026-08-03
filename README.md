@@ -18,13 +18,14 @@ reviewed. It will move to Alice's own domain later — see [Domain cutover](#dom
 ## Stack
 
 Eleventy v3 → static HTML → GitHub Actions → GitHub Pages. No framework, no CMS, no
-database, no tracking. System fonts only, so there are zero font downloads.
+database, no tracking. Ocean palette throughout — her current research concerns coastal and small-scale fishing communities facing climate displacement. System fonts only, so there are zero font downloads.
 
 | | |
 |---|---|
-| Home page | ~8 KB uncompressed, ~2.6 KB gzipped |
-| CSS | 6.7 KB, one file |
+| Home page | ~11 KB uncompressed, ~3.2 KB gzipped |
+| CSS | 9.7 KB, one file |
 | JS | 1.2 KB — mobile nav toggle and list filter, nothing else |
+| Images | 340 KB total, lazy-loaded (12 real covers rendered from PDFs, 22 generated SVG tiles, 1 video thumbnail) |
 | Third-party requests | none |
 | Hosting cost | £0 |
 
@@ -49,7 +50,7 @@ scripts/check.js  content validator, runs before every build
 
 ## Content
 
-45 items, all verified against primary sources. Authorship of each Human Rights Watch
+46 items, all verified against primary sources. Authorship of each Human Rights Watch
 report was confirmed by reading the acknowledgements page of the report itself — which is
 how "Left to Survive" (2008), widely mis-attributed to her online, was correctly excluded.
 

@@ -1,4 +1,4 @@
-// Two features only: the mobile nav toggle and the list filter.
+// Two features only: the mobile nav toggle and the page filter.
 (function () {
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("site-nav");
@@ -10,10 +10,19 @@
     });
   }
 
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
   var input = document.getElementById("filter-input");
   if (!input) return;
   var status = document.querySelector(".filter-status");
-  var entries = Array.prototype.slice.call(document.querySelectorAll(".entry"));
+  var entries = [].slice.call(document.querySelectorAll(".entry"));
+  var groups = [].slice.call(document.querySelectorAll(".year-group"));
+  var sections = [].slice.call(document.querySelectorAll(".entry-section"));
+
+  function hideIfEmpty(el) {
+    el.hidden = !el.querySelector(".entry:not([hidden])");
+  }
 
   input.addEventListener("input", function () {
     var q = input.value.trim().toLowerCase();
@@ -23,12 +32,14 @@
       el.hidden = !match;
       if (match) shown++;
     });
-    document.querySelectorAll(".year-group").forEach(function (group) {
-      var any = group.querySelector(".entry:not([hidden])");
-      group.hidden = !any;
-    });
+    groups.forEach(hideIfEmpty);
+    sections.forEach(hideIfEmpty);
     if (status) {
-      status.textContent = q ? shown + " of " + entries.length + " shown" : "";
+      status.textContent = !q
+        ? ""
+        : shown === 0
+        ? "Nothing matches “" + input.value.trim() + "”."
+        : shown + " of " + entries.length + " shown";
     }
   });
 })();

@@ -7,10 +7,10 @@ There are only **six files** you will ever edit, and they all live in one folder
 
 | To add or change… | Edit this file |
 |---|---|
-| A law journal or peer-reviewed article | `src/_data/scholarship.yaml` |
+| A law journal or peer-reviewed article | `src/_data/articles.yaml` |
 | A research report | `src/_data/reports.yaml` |
 | An op-ed or short piece | `src/_data/commentary.yaml` |
-| A talk, press mention or profile | `src/_data/media.yaml` |
+| A talk, press mention or affiliation | `src/_data/media.yaml` |
 | A book or ongoing project | `src/_data/projects.yaml` |
 | Your name, tagline, bio, contact links | `src/_data/site.yaml` |
 
@@ -58,7 +58,30 @@ Everything else is optional — leave a line out entirely if you don't need it.
 | `note` | A sentence of context, shown under the entry. |
 | `featured` | `true` pins it to the home page. Delete the line to unpin. |
 | `lang` | Only for non-English pieces: `"fr"` for French, `"ar"` for Arabic. |
-| `kind` | **Media only.** Must be `press`, `talk` or `profile` — this decides which section of the Media page it appears in. |
+| `image` | The picture shown to the left. A filename from `src/assets/img/`. |
+| `kind` | **Media only.** Must be `press`, `talk` or `affiliation` — this decides which section of the Media page it appears in. |
+
+---
+
+## Adding the picture
+
+Each entry shows a small image on the left — a journal cover, a report cover, or a tile
+with the publication's name on it.
+
+**To reuse an existing one**, just point at it. Open `src/assets/img/` to see what's there
+and copy the filename:
+
+```yaml
+image: "hrw.svg"          # the Human Rights Watch tile
+image: "fmr.svg"          # the Forced Migration Review tile
+```
+
+**To add a new cover**, drag the image file into `src/assets/img/` on GitHub (open the
+folder, then **Add file → Upload files**), and reference its filename. A portrait-shaped
+image around 240×312 pixels looks best.
+
+If you leave `image` out entirely the entry still works — it just shows a plain grey tile.
+The content check will remind you.
 
 ---
 

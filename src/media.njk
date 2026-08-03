@@ -2,21 +2,32 @@
 layout: base.njk
 title: Media
 permalink: /media/
-description: "Press coverage, lectures, panels and public engagement by Alice Hamilton Farmer."
+description: "Talks, panels, press coverage and affiliations of Alice Hamilton Farmer."
 ---
 <div class="page-header">
   <h1>Media &amp; public engagement</h1>
-  <p>Talks and panels, press coverage of the research, and institutional profiles.</p>
+  <p>Talks and panels, press coverage of the research, and current affiliations.</p>
 </div>
 
-<h2 class="section-heading">Talks &amp; panels</h2>
-{% set entries = media | where("kind", "talk") %}
-{% include "entry-list.njk" %}
+{% include "filter.njk" %}
 
-<h2 class="section-heading">Press</h2>
-{% set entries = media | where("kind", "press") %}
-{% include "entry-list.njk" %}
+<section class="entry-section">
+  <h2 class="section-heading">Talks &amp; panels</h2>
+  {% set entries = media | where("kind", "talk") %}
+  {% set showYears = true %}
+  {% include "entry-list.njk" %}
+</section>
 
-<h2 class="section-heading">Profiles &amp; affiliations</h2>
-{% set entries = media | where("kind", "profile") %}
-{% include "entry-list.njk" %}
+<section class="entry-section">
+  <h2 class="section-heading">Press</h2>
+  {% set entries = media | where("kind", "press") %}
+  {% set showYears = true %}
+  {% include "entry-list.njk" %}
+</section>
+
+<section class="entry-section">
+  <h2 class="section-heading">Affiliations</h2>
+  {% set entries = media | where("kind", "affiliation") %}
+  {% set showYears = false %}
+  {% include "entry-list.njk" %}
+</section>

@@ -41,8 +41,7 @@ Elgar.
 ## Teaching
 
 She has lectured on human rights at Harvard Law School, Georgetown University Law Center,
-and the Institut d'études politiques de Paris (Sciences Po), and teaches in History &
-Literature at Harvard.
+and the Institut d'études politiques de Paris (Sciences Po).
 
 ## Education
 

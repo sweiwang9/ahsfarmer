@@ -1,0 +1,21 @@
+<li class="entry"{% if entry.lang %} lang="{{ entry.lang }}"{% endif %}>
+  {% if entry.image %}
+  <img class="entry-thumb" src="{{ ('/assets/img/' + entry.image) | url }}" alt="" width="84" height="109" loading="lazy" decoding="async">
+  {% else %}
+  <span class="entry-thumb" aria-hidden="true"></span>
+  {% endif %}
+  <div class="entry-body">
+    {% if entry.label %}<span class="entry-label">{{ entry.label }}</span>{% endif %}
+    <h3 class="entry-title">
+      {% if entry.url %}<a href="{{ entry.url }}">{{ entry.title }}</a>{% else %}{{ entry.title }}{% endif %}
+    </h3>
+    <p class="entry-meta">
+      {% if entry.venue %}<span class="venue">{{ entry.venue }}</span>{% endif %}
+      {% if entry.authors %}<span class="authors">{{ entry.authors }}</span>{% endif %}
+      {% if entry.date %}<span class="date">{{ entry.date }}</span>{% endif %}
+      {% if entry.status %}<span class="status">{{ entry.status }}</span>{% endif %}
+    </p>
+    {% if entry.note %}<p class="entry-note">{{ entry.note }}</p>{% endif %}
+    {% if entry.pdf %}<p class="entry-links"><a class="pdf" href="{{ entry.pdf }}">PDF</a></p>{% endif %}
+  </div>
+</li>
