@@ -1,42 +1,37 @@
-# SITE SETTINGS — name, tagline, biography, contact links and the menu.
-
-name: "Alice Hamilton Farmer"
-tagline: "Refugee Lawyer · Researcher · Writer"
-description: "Alice Hamilton Farmer is an international lawyer working on refugee law, forced displacement and climate mobility."
-
-# The line under the name on the home page. Keep the middle dots.
-themes: "Climate displacement · Coastal communities · Refugee protection ·"
-
-# Home page biography. Each item is one paragraph.
+name: Alice Hamilton Farmer
+tagline: Law Professor · Adviser · Writer
+themes: Climate displacement · Coastal communities · Refugee protection ·
+description: Alice Hamilton Farmer is an international lawyer working on refugee
+  law, forced displacement, and climate mobility.
 about:
   - >
-    Alice Hamilton Farmer is an Associate Professor of Law at the University of Maine and a
-    Senior Adviser for Climate Rights International. For twenty years she has worked on
-    refugee protection and the rights of people in displacement — in refugee camps,
-    detention centres and courtrooms.
+    Alice Hamilton Farmer is an Associate Professor of Law at the University of
+    Maine and a Senior Adviser for Climate Rights International. For twenty
+    years she has worked on refugee protection and the rights of people in
+    displacement — in refugee camps, detention centres and courtrooms.
   - >
-    For over a decade she was a lawyer with UNHCR, the UN Refugee Agency, latterly as head
-    of its United States legal team, where she represented the agency before the US Supreme
-    Court and the federal courts of appeals and served as its focal point for climate change.
+    For over a decade she was a lawyer with UNHCR, the UN Refugee Agency,
+    latterly as head of its United States legal team, where she represented the
+    agency before the US Supreme Court and the federal courts of appeals and
+    served as its focal point for climate change.
   - >
-    Her current research asks how climate change is reshaping the legal framework of
-    forced displacement, with a focus on small-scale fishing communities and other coastal
-    populations living with slow-onset loss.
-
-# One line, updated occasionally. Shown at the bottom of the home page.
+    Her current research asks how climate change is reshaping the legal
+    framework of forced displacement, with a focus on small-scale fishing
+    communities and other coastal populations living with slow-onset loss.
 currently: >
-  Currently writing on climate displacement and building a proof of concept for a climate
-  change law lab.
-
-email: ""            # leave empty to hide the contact link and button
-linkedin: "https://www.linkedin.com/in/alice-farmer-8920979/"
-
-# The menu. "label" is the wording shown; "page" chooses which page it points to.
-# Reorder by dragging. You cannot create a broken link — "page" only offers real pages.
+  Currently writing on climate displacement and building a proof of concept for
+  a climate change law lab.
+linkedin: https://www.linkedin.com/in/alice-farmer-8920979/
 nav:
-  - { label: "Articles",   page: articles }
-  - { label: "Reports",    page: reports }
-  - { label: "Commentary", page: commentary }
-  - { label: "Media",      page: media }
-  - { label: "Projects",   page: projects }
-  - { label: "About",      page: about }
+  - label: Articles
+    page: articles
+  - label: Reports
+    page: reports
+  - label: Commentary
+    page: commentary
+  - label: Media
+    page: media
+  - label: Projects
+    page: projects
+  - label: About
+    page: about
