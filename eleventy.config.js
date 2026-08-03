@@ -48,10 +48,15 @@ export default function (eleventyConfig) {
     entries.map((entry) => ({ ...entry, label }))
   );
 
+  // The local dev server always serves from the root, so it must always build with a "/"
+  // prefix — otherwise a previous production build (which uses "/ahsfarmer/") leaves
+  // stale, wrongly-prefixed HTML in _site and every asset 404s on localhost.
+  const isLocal = ["serve", "watch"].includes(process.env.ELEVENTY_RUN_MODE);
+
   return {
-    // "/" locally and on a custom domain; "/ahsfarmer/" on the GitHub project page.
-    // Set by the deploy workflow. This is the only thing that changes at domain cutover.
-    pathPrefix: process.env.PATH_PREFIX || "/",
+    // "/" locally and on a custom domain; "/ahsfarmer/" on the GitHub project page,
+    // set by the deploy workflow. This is the only thing that changes at domain cutover.
+    pathPrefix: isLocal ? "/" : process.env.PATH_PREFIX || "/",
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dir: {

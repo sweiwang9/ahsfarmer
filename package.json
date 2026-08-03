@@ -7,7 +7,7 @@
   "scripts": {
     "check": "node scripts/check.js",
     "build": "npm run check && eleventy",
-    "serve": "eleventy --serve",
+    "serve": "npm run clean && eleventy --serve",
     "clean": "rm -rf _site"
   },
   "devDependencies": {
