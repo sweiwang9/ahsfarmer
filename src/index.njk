@@ -12,18 +12,18 @@ fullBleed: true
 
 <div class="wrap">
 
-<h2 class="section-heading">{{ pages.home.latest_heading or "Latest" }}</h2>
+{% if pages.home.latest_heading %}<h2 class="section-heading">{{ pages.home.latest_heading }}</h2>{% endif %}
 {% set entries = articles | featured | withLabel(pages.articles.nav_title or "Articles") | concat(
                  reports | featured | withLabel(pages.reports.nav_title or "Reports"),
                  commentary | featured | withLabel(pages.commentary.nav_title or "Commentary")) %}
 {% set showYears = false %}
 {% include "entry-list.njk" %}
 
-<h2 class="section-heading">{{ pages.home.progress_heading or "In progress" }}</h2>
+{% if pages.home.progress_heading %}<h2 class="section-heading">{{ pages.home.progress_heading }}</h2>{% endif %}
 {% set entries = projects | featured | withLabel(pages.projects.nav_title or "Projects") %}
 {% include "entry-list.njk" %}
 
-<h2 class="section-heading">{{ pages.home.about_heading or "About" }}</h2>
+{% if pages.home.about_heading %}<h2 class="section-heading">{{ pages.home.about_heading }}</h2>{% endif %}
 <div class="about-block">
   {% for para in site.about %}<p>{{ para }}</p>{% endfor %}
   <div class="buttons">

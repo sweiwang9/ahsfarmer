@@ -7,7 +7,7 @@ eleventyComputed:
 ---
 <div class="page-header">
   <h1>{{ pages.commentary.heading or "Commentary" }}</h1>
-  <p>{{ pages.commentary.intro }}</p>
+  {% if pages.commentary.intro %}<p>{{ pages.commentary.intro }}</p>{% endif %}
 </div>
 
 {% include "filter.njk" %}

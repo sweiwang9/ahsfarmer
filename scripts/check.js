@@ -113,22 +113,27 @@ if (site) {
 
 /* ---------- page text ---------- */
 
-// Every key the templates read, so a missing one is caught here rather than
-// rendering a blank heading on the live site.
+// Only what a page genuinely cannot do without. Section headings, intro paragraphs
+// and button labels are all optional: clearing one removes that element rather than
+// leaving a blank heading, because deleting a section is a legitimate edit.
 const REQUIRED_PAGE_TEXT = {
-  home: ["latest_heading", "progress_heading", "about_heading", "bio_button"],
-  articles: ["nav_title", "heading", "intro", "seo"],
-  reports: ["nav_title", "heading", "intro", "seo"],
-  commentary: ["nav_title", "heading", "intro", "seo"],
-  projects: ["nav_title", "heading", "intro", "seo"],
-  media: ["nav_title", "heading", "intro", "seo",
-          "talks_heading", "press_heading", "affiliations_heading"],
+  articles: ["nav_title", "heading", "seo"],
+  reports: ["nav_title", "heading", "seo"],
+  commentary: ["nav_title", "heading", "seo"],
+  projects: ["nav_title", "heading", "seo"],
+  media: ["nav_title", "heading", "seo"],
   about: ["nav_title", "heading", "seo"],
-  ui: ["filter_placeholder", "pdf_label"],
 };
+
+// These groups must exist even if every value inside them is blank, because the
+// templates read through them.
+const REQUIRED_PAGE_GROUPS = ["home", "ui"];
 
 const pages = load("pages.yaml");
 if (pages) {
+  for (const group of REQUIRED_PAGE_GROUPS)
+    if (!pages[group]) fail("pages.yaml", `the "${group}" section is missing entirely.`);
+
   for (const [group, keys] of Object.entries(REQUIRED_PAGE_TEXT)) {
     if (!pages[group]) {
       fail("pages.yaml", `the "${group}" section is missing entirely.`);
@@ -137,8 +142,7 @@ if (pages) {
     for (const key of keys) {
       const value = pages[group][key];
       if (value === undefined || value === null || String(value).trim() === "")
-        fail("pages.yaml", `"${group}.${key}" is empty. It needs some text, or the page ` +
-          `will show a blank heading.`);
+        fail("pages.yaml", `"${group}.${key}" is empty, and the page needs it.`);
     }
   }
 }

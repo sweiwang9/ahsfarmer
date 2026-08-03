@@ -7,7 +7,7 @@ eleventyComputed:
 ---
 <div class="page-header">
   <h1>{{ pages.projects.heading or "Projects" }}</h1>
-  <p>{{ pages.projects.intro }}</p>
+  {% if pages.projects.intro %}<p>{{ pages.projects.intro }}</p>{% endif %}
 </div>
 
 {% set entries = projects %}

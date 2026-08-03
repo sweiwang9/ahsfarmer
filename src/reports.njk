@@ -7,7 +7,7 @@ eleventyComputed:
 ---
 <div class="page-header">
   <h1>{{ pages.reports.heading or "Reports" }}</h1>
-  <p>{{ pages.reports.intro }}</p>
+  {% if pages.reports.intro %}<p>{{ pages.reports.intro }}</p>{% endif %}
 </div>
 
 {% include "filter.njk" %}

@@ -7,28 +7,37 @@ eleventyComputed:
 ---
 <div class="page-header">
   <h1>{{ pages.media.heading or "Media & public engagement" }}</h1>
-  <p>{{ pages.media.intro }}</p>
+  {% if pages.media.intro %}<p>{{ pages.media.intro }}</p>{% endif %}
 </div>
 
 {% include "filter.njk" %}
 
+{% set talks = media | where("kind", "talk") %}
+{% if talks | length %}
 <section class="entry-section">
-  <h2 class="section-heading">{{ pages.media.talks_heading or "Talks & panels" }}</h2>
-  {% set entries = media | where("kind", "talk") %}
+  {% if pages.media.talks_heading %}<h2 class="section-heading">{{ pages.media.talks_heading }}</h2>{% endif %}
+  {% set entries = talks %}
   {% set showYears = true %}
   {% include "entry-list.njk" %}
 </section>
+{% endif %}
 
+{% set press = media | where("kind", "press") %}
+{% if press | length %}
 <section class="entry-section">
-  <h2 class="section-heading">{{ pages.media.press_heading or "Press" }}</h2>
-  {% set entries = media | where("kind", "press") %}
+  {% if pages.media.press_heading %}<h2 class="section-heading">{{ pages.media.press_heading }}</h2>{% endif %}
+  {% set entries = press %}
   {% set showYears = true %}
   {% include "entry-list.njk" %}
 </section>
+{% endif %}
 
+{% set affiliations = media | where("kind", "affiliation") %}
+{% if affiliations | length %}
 <section class="entry-section">
-  <h2 class="section-heading">{{ pages.media.affiliations_heading or "Affiliations" }}</h2>
-  {% set entries = media | where("kind", "affiliation") %}
+  {% if pages.media.affiliations_heading %}<h2 class="section-heading">{{ pages.media.affiliations_heading }}</h2>{% endif %}
+  {% set entries = affiliations %}
   {% set showYears = false %}
   {% include "entry-list.njk" %}
 </section>
+{% endif %}
