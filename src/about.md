@@ -11,9 +11,14 @@ description: "Biography of Alice Hamilton Farmer, international refugee lawyer."
 
 <div class="prose">
 
-Alice Hamilton Farmer is an international lawyer. For twenty years she has worked on
-refugee protection and the rights of people in displacement, in the field and in the
-courts.
+Alice Hamilton Farmer is an **Associate Professor of Law at the University of Maine** and a
+**Senior Adviser for Climate Rights International**. For over a decade she was a lawyer
+with UNHCR, the UN Refugee Agency, in offices around the world including the United States.
+
+Across twenty years she has worked on refugee protection and the rights of people in
+displacement, in the field and in the courts. Her research now asks how climate change is
+reshaping the international legal framework of forced displacement, with a focus on
+small-scale fishing communities and other coastal populations living with slow-onset loss.
 
 Until January 2024 she was head of the United States legal team for **UNHCR**, the UN
 Refugee Agency, where she oversaw strategic litigation and policy analysis, drafted the

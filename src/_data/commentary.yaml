@@ -1,9 +1,19 @@
 # COMMENTARY — op-eds and short opinion pieces.
 #
-# Note on links: several original outlets are dead (European Voice, Public Service Europe,
-# New Europe Online all folded; HuffPost purged its 2009-2013 contributor archive). The
-# links below point at the versions Human Rights Watch republished, which are still live.
-# The original outlet is named in "venue" for citation.
+# Note on links: for the 2008-2014 pieces, several original outlets are dead (European
+# Voice, Public Service Europe and New Europe Online all folded; HuffPost purged its
+# 2009-2013 contributor archive), so those links point at the versions Human Rights Watch
+# republished, which are still live. The original outlet is named in "venue" for citation.
+# Newer pieces link directly to the publisher.
+
+- title: "The Aftermath of Mullin v. Doe: Better Protections Needed for Climate-Displaced Haitians"
+  year: 2026
+  date: "1 August 2026"
+  venue: "Oxford Human Rights Hub, University of Oxford"
+  url: "https://ohrh.law.ox.ac.uk/the-aftermath-of-mullin-v-doe-better-protections-needed-for-climate-displaced-haitians/"
+  image: "ohrh.svg"
+  featured: true
+  note: "On the Supreme Court decision stripping Temporary Protected Status from more than 300,000 Haitians, and the case for permanent, tailored legal pathways drawing on the CARICOM Free Movement Agreement and the Cartagena Declaration."
 
 - title: "We Need to Show Compassion Toward Immigrant Children"
   image: "hrw.svg"
@@ -18,7 +28,6 @@
   date: "20 May 2013"
   venue: "The Huffington Post (UK)"
   url: "https://www.hrw.org/news/2013/05/20/real-life-hunger-games"
-  featured: true
 
 - title: "Des « Hunger Games » bien réels"
   image: "hrw.svg"
@@ -57,7 +66,6 @@
   date: "13 August 2012"
   venue: "JURIST"
   url: "https://www.hrw.org/news/2012/08/13/guilty-adulthood-until-proven-child"
-  featured: true
   note: "On age assessment of unaccompanied migrant children arriving in Malta."
 
 - title: "Children Trapped in the EU's Web"
@@ -87,6 +95,27 @@
   date: "11 August 2009"
   venue: "The Huffington Post"
   url: "https://www.hrw.org/news/2009/08/11/stop-beating-students-disabilities-schools"
+
+- title: "Ohio Bans Corporal Punishment"
+  image: "aclu.svg"
+  year: 2009
+  date: "20 July 2009"
+  venue: "American Civil Liberties Union"
+  url: "https://www.aclu.org/news/human-rights/ohio-bans-corporal-punishment"
+
+- title: "Stop Beating Children in Schools"
+  image: "aclu.svg"
+  year: 2009
+  date: "30 April 2009"
+  venue: "American Civil Liberties Union"
+  url: "https://www.aclu.org/news/human-rights/stop-beating-children-schools"
+
+- title: "End Abusive, Discriminatory Discipline in Schools: Give All Students a Chance to Thrive"
+  image: "aclu.svg"
+  year: 2008
+  date: "16 December 2008"
+  venue: "American Civil Liberties Union"
+  url: "https://www.aclu.org/news/human-rights/end-abusive-discriminatory-discipline-schools-give"
 
 - title: "No Way to Treat a Child"
   image: "pta-magazine.svg"
