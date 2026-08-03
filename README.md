@@ -12,8 +12,6 @@ This is a **mockup**, deployed to the temporary GitHub Pages address while the d
 reviewed. It will move to Alice's own domain later — see [Domain cutover](#domain-cutover).
 
 - Live: https://sweiwang9.github.io/ahsfarmer/
-- Plan: [WEBSITE-PLAN.md](WEBSITE-PLAN.md)
-- Research record: [SUMMARY.md](SUMMARY.md)
 
 ## Stack
 
@@ -69,7 +67,9 @@ Two changes when the real domain is ready:
 2. Add a `CNAME` file at the repo root containing the domain, then set it under
    Settings → Pages and tick **Enforce HTTPS**.
 
-DNS records are written out in [WEBSITE-PLAN.md §11](WEBSITE-PLAN.md).
+The GitHub Pages apex records are four `A` records to `185.199.108–111.153`, four `AAAA`
+records to `2606:50c0:8000–8003::153`, and a `CNAME` for `www`. Check whether the domain
+serves email before changing anything — the `MX` records must be left alone.
 
 ## Known gaps
 

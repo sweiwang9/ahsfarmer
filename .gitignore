@@ -4,7 +4,14 @@ _site/
 *.log
 
 # Research archive — full-text copies of published articles, kept locally in Dropbox
-# rather than republished in a public repo. See RESEARCH-ARCHIVE.md.
+# rather than republished in a public repo.
 /articles/
 /commentary/
 /media/
+
+# Internal working documents — kept locally alongside the research archive,
+# not published. The site does not depend on any of them.
+/SUMMARY.md
+/CMS-PLAN.md
+/WEBSITE-PLAN.md
+/RESEARCH-ARCHIVE.md
