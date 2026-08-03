@@ -6,9 +6,10 @@
   "license": "MIT",
   "scripts": {
     "check": "node scripts/check.js",
-    "build": "npm run check && eleventy",
+    "build": "npm run check && eleventy && npm run smoke",
     "serve": "npm run clean && eleventy --serve",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf _site",
+    "smoke": "node scripts/smoke.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

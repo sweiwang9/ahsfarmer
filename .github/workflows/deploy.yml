@@ -33,6 +33,8 @@ jobs:
         env:
           PATH_PREFIX: /ahsfarmer/
         run: npx @11ty/eleventy
+      - name: Smoke test the built pages
+        run: npm run smoke
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
