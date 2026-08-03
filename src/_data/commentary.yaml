@@ -1,0 +1,90 @@
+# COMMENTARY — op-eds and short opinion pieces.
+#
+# Note on links: several original outlets are dead (European Voice, Public Service Europe,
+# New Europe Online all folded; HuffPost purged its 2009-2013 contributor archive). The
+# links below point at the versions Human Rights Watch republished, which are still live.
+# The original outlet is named in "venue" for citation.
+
+- title: "We Need to Show Compassion Toward Immigrant Children"
+  year: 2014
+  date: "9 May 2014"
+  venue: "Human Rights Watch"
+  url: "https://www.hrw.org/news/2014/05/09/we-need-show-compassion-toward-immigrant-children"
+
+- title: "A Real Life 'Hunger Games'"
+  year: 2013
+  date: "20 May 2013"
+  venue: "The Huffington Post (UK)"
+  url: "https://www.hrw.org/news/2013/05/20/real-life-hunger-games"
+  featured: true
+
+- title: "Des « Hunger Games » bien réels"
+  year: 2013
+  date: "20 May 2013"
+  venue: "Human Rights Watch, French edition"
+  lang: "fr"
+  url: "https://www.hrw.org/fr/news/2013/05/20/des-hunger-games-bien-reels"
+
+- title: "Italy Turns Its Back on Children Seeking Refuge"
+  year: 2013
+  date: "27 January 2013"
+  venue: "New Europe Online"
+  url: "https://www.hrw.org/news/2013/01/27/italy-turns-its-back-children-seeking-refuge"
+
+- title: "L'Union européenne devrait aider davantage les Syriens qui fuient la guerre"
+  year: 2012
+  date: "10 December 2012"
+  venue: "Le Huffington Post (France)"
+  authors: "with Judith Sunderland"
+  lang: "fr"
+  url: "https://www.hrw.org/fr/news/2012/12/10/lunion-europeenne-devrait-aider-davantage-les-syriens-qui-fuient-la-guerre"
+
+- title: "EU, as Peacemaker, Should Welcome Those Fleeing War"
+  year: 2012
+  date: "17 October 2012"
+  venue: "European Voice"
+  url: "https://www.hrw.org/news/2012/10/17/eu-peacemaker-should-welcome-those-fleeing-war"
+
+- title: "Guilty of Adulthood Until Proven a Child"
+  year: 2012
+  date: "13 August 2012"
+  venue: "JURIST"
+  url: "https://www.hrw.org/news/2012/08/13/guilty-adulthood-until-proven-child"
+  featured: true
+  note: "On age assessment of unaccompanied migrant children arriving in Malta."
+
+- title: "Children Trapped in the EU's Web"
+  year: 2012
+  date: "18 July 2012"
+  venue: "European Voice"
+  url: "https://www.hrw.org/news/2012/07/18/children-trapped-eus-web"
+
+- title: "Children Deported to Kabul Will Face 'Horrible Risks'"
+  year: 2012
+  date: "10 February 2012"
+  venue: "Public Service Europe"
+  url: "https://www.hrw.org/news/2012/02/10/children-deported-kabul-will-face-horrible-risks"
+
+- title: "US: Protect Children with Disabilities from School Violence"
+  year: 2011
+  date: "14 October 2011"
+  venue: "The Hill, Congress Blog"
+  url: "https://www.hrw.org/news/2011/10/14/us-protect-children-disabilities-school-violence"
+
+- title: "Stop Beating Students with Disabilities in Schools"
+  year: 2009
+  date: "11 August 2009"
+  venue: "The Huffington Post"
+  url: "https://www.hrw.org/news/2009/08/11/stop-beating-students-disabilities-schools"
+
+- title: "No Way to Treat a Child"
+  year: 2009
+  date: "December 2008 / January 2009"
+  venue: "PTA Magazine"
+  url: "https://www.hrw.org/news/2009/01/01/no-way-treat-child"
+
+- title: "Corporal Punishment Proves to Be Discriminatory, Ineffective"
+  year: 2008
+  date: "22 August 2008"
+  venue: "The Clarion-Ledger, Jackson, Mississippi"
+  url: "https://www.hrw.org/news/2008/08/22/corporal-punishment-proves-be-discriminatory-ineffective"

@@ -1,0 +1,10 @@
+node_modules/
+_site/
+.DS_Store
+*.log
+
+# Research archive — full-text copies of published articles, kept locally in Dropbox
+# rather than republished in a public repo. See RESEARCH-ARCHIVE.md.
+/articles/
+/commentary/
+/media/

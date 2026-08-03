@@ -1,0 +1,28 @@
+# Site-wide settings. Edit the tagline and bio here.
+name: "Alice Hamilton Farmer"
+tagline: "Refugee Lawyer . Researcher . Writer"
+description: "Alice Hamilton Farmer is an international lawyer working on refugee law, forced displacement and climate mobility."
+
+# Shown on the home page under the name.
+intro: >
+  I am an international lawyer. For twenty years I have worked on refugee protection —
+  with Human Rights Watch, the Norwegian Refugee Council and the UN Refugee Agency — in
+  settings from Liberia to Moldova to the US southern border. My current research asks how
+  climate change is reshaping the legal framework of forced displacement.
+
+# One line, updated occasionally. Shown at the bottom of the home page.
+currently: >
+  Currently a Fellow at the Center for Advanced Study in the Behavioral Sciences at
+  Stanford, and building a proof of concept for a climate change law lab.
+
+email: ""            # leave empty to hide the contact link
+twitter: "ahsfarmer"
+linkedin: "https://www.linkedin.com/in/alice-farmer-8920979/"
+
+nav:
+  - { text: "Scholarship", url: "/scholarship/" }
+  - { text: "Reports", url: "/reports/" }
+  - { text: "Commentary", url: "/commentary/" }
+  - { text: "Media", url: "/media/" }
+  - { text: "Projects", url: "/projects/" }
+  - { text: "About", url: "/about/" }

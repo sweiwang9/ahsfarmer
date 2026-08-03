@@ -1,0 +1,22 @@
+---
+layout: base.njk
+title: Media
+permalink: /media/
+description: "Press coverage, lectures, panels and public engagement by Alice Hamilton Farmer."
+---
+<div class="page-header">
+  <h1>Media &amp; public engagement</h1>
+  <p>Talks and panels, press coverage of the research, and institutional profiles.</p>
+</div>
+
+<h2 class="section-heading">Talks &amp; panels</h2>
+{% set entries = media | where("kind", "talk") %}
+{% include "entry-list.njk" %}
+
+<h2 class="section-heading">Press</h2>
+{% set entries = media | where("kind", "press") %}
+{% include "entry-list.njk" %}
+
+<h2 class="section-heading">Profiles &amp; affiliations</h2>
+{% set entries = media | where("kind", "profile") %}
+{% include "entry-list.njk" %}
