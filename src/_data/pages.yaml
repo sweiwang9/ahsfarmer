@@ -1,74 +1,62 @@
-# PAGE TEXT — every heading, intro paragraph and description on the site.
-#
-# Edit these through the "Page text" section of the editor.
-# If you clear a field, the site falls back to sensible default wording rather
-# than showing an empty heading.
-#
-# "seo" is the one-line summary Google and social media show. It is never
-# displayed on the page itself.
-
 home:
-  latest_heading: "Latest"
-  progress_heading: "In progress"
-  about_heading: "About Alice"
-  bio_button: "Read full bio"
-  contact_button: "Get in touch"
-
+  latest_heading: Latest
+  progress_heading: In progress
+  about_heading: About Alice
+  bio_button: Read full bio
+  contact_button: Get in touch
 articles:
-  nav_title: "Articles"
-  heading: "Articles"
+  nav_title: Articles
+  heading: Articles
   intro: >
-    Law journal and peer-reviewed writing on refugee protection, non-refoulement, the
-    rights of children in displacement, and the law of climate mobility.
+    Law journal and peer-reviewed writing on refugee protection,
+    non-refoulement, the rights of children in displacement, and the law of
+    climate mobility.
   seo: >
-    Law journal and peer-reviewed articles by Alice Hamilton Farmer on refugee law,
-    non-refoulement, children's rights and climate displacement.
-
+    Law journal and peer-reviewed articles by Alice Hamilton Farmer on refugee
+    law, non-refoulement, children's rights and climate displacement.
 reports:
-  nav_title: "Reports"
-  heading: "Reports"
+  nav_title: Reports
+  heading: Reports
   intro: >
-    Field investigations written at Human Rights Watch, based on interviews conducted in
-    detention centres, refugee camps and schools across Europe, Asia and the United States.
+    Field investigations written at Human Rights Watch, based on interviews
+    conducted in detention centres, refugee camps and schools across Europe,
+    Asia and the United States.
   seo: >
-    Field research reports by Alice Hamilton Farmer for Human Rights Watch on migrant
-    children in Malta, Indonesia, Italy and Greece, and on corporal punishment in US schools.
-
+    Field research reports by Alice Hamilton Farmer for Human Rights Watch on
+    migrant children in Malta, Indonesia, Italy and Greece, and on corporal
+    punishment in US schools.
 commentary:
-  nav_title: "Commentary"
-  heading: "Commentary"
+  nav_title: Commentary
+  heading: Commentary
   intro: >
-    Shorter opinion writing, most of it from the years at Human Rights Watch and the ACLU.
-    Several of the original outlets have since closed; those links point to the versions
-    Human Rights Watch republished.
+    Shorter opinion writing, most of it from the years at Human Rights Watch and
+    the ACLU. Several of the original outlets have since closed; those links
+    point to the versions Human Rights Watch republished.
   seo: >
-    Op-eds and short commentary by Alice Hamilton Farmer, published in the Oxford Human
-    Rights Hub, JURIST, The Huffington Post, European Voice, The Hill and elsewhere.
-
+    Op-eds and short commentary by Alice Hamilton Farmer, published in the
+    Oxford Human Rights Hub, JURIST, The Huffington Post, European Voice, The
+    Hill and elsewhere.
 media:
-  nav_title: "Media"
-  heading: "Media & public engagement"
-  intro: "Talks and panels, press coverage of the research, and current affiliations."
-  seo: "Talks, panels, press coverage and affiliations of Alice Hamilton Farmer."
-  talks_heading: "Talks & panels"
-  press_heading: "Press"
-  affiliations_heading: "Affiliations"
-
+  nav_title: Media
+  heading: Media & public engagement
+  intro: "Talks and panels, press coverage "
+  seo: Talks, panels, press coverage of Alice Hamilton Farmer.
+  talks_heading: Talks & panels
+  press_heading: Press
 projects:
-  nav_title: "Projects"
-  heading: "Projects"
-  intro: "Books and longer-running work."
+  nav_title: Projects
+  heading: Projects
+  intro: Books and longer-running work.
   seo: >
-    Book projects and longer-running work by Alice Hamilton Farmer, including a forthcoming
-    Edward Elgar edited volume on climate change, migration, gender and the law.
-
+    Book projects and longer-running work by Alice Hamilton Farmer, including a
+    forthcoming Edward Elgar edited volume on climate change, migration, gender
+    and the law.
 about:
-  nav_title: "About"
-  heading: "About"
-  seo: "Biography of Alice Hamilton Farmer, international refugee lawyer."
-
+  nav_title: About
+  heading: About
+  seo: Biography of Alice Hamilton Farmer, international refugee lawyer.
 ui:
-  filter_placeholder: "Filter by title, venue or year…"
-  pdf_label: "PDF"
-  skip_link: "Skip to content"
-  menu_label: "Menu"
+  filter_placeholder: Filter by title, venue or year…
+  pdf_label: PDF
+  skip_link: Skip to content
+  menu_label: Menu
