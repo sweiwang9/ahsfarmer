@@ -1,0 +1,257 @@
+# Pages CMS configuration — https://pagescms.org
+#
+# This file controls the editing interface at app.pagescms.org.
+# Alice edits content through that interface; she should never need to open this file.
+
+media:
+  input: src/assets/img
+  output: /assets/img
+  categories: [image]
+  extensions: [jpg, jpeg, png, svg, webp]
+
+settings:
+  commit:
+    identity: user          # commits carry her name rather than the app's
+
+content:
+  # ---------------------------------------------------------------- publications
+
+  - name: articles
+    label: Articles
+    description: Law journal and peer-reviewed articles.
+    type: file
+    path: src/_data/articles.yaml
+    list: true
+    view:
+      fields: [title, year, venue]
+      primary: title
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: year, label: Year, type: number, required: true,
+          description: "Four digits, e.g. 2026. Used to group the list." }
+      - { name: venue, label: Journal or publisher, type: string,
+          description: "e.g. 36 Stanford Law & Policy Review 1" }
+      - { name: authors, label: Co-authors, type: string,
+          description: "Only if co-written, e.g. with Katerina Linos" }
+      - { name: url, label: Link, type: string,
+          description: "Where the piece can be read. Makes the title clickable." }
+      - { name: pdf, label: PDF link, type: string,
+          description: "Optional. Adds a small PDF button." }
+      - { name: image, label: Cover image, type: image,
+          description: "Drag in a new file or pick an existing one. Large files are shrunk automatically." }
+      - { name: image_alt, label: Image description, type: string,
+          description: "For screen readers. Leave blank for a plain cover or logo." }
+      - { name: featured, label: Show on the home page, type: boolean, default: false }
+      - { name: note, label: Short description, type: text,
+          description: "A sentence or two shown under the entry." }
+
+  - name: reports
+    label: Reports
+    description: Field research reports.
+    type: file
+    path: src/_data/reports.yaml
+    list: true
+    view:
+      fields: [title, year, venue]
+      primary: title
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: year, label: Year, type: number, required: true }
+      - { name: venue, label: Publisher, type: string,
+          description: "e.g. Human Rights Watch, 92 pp." }
+      - { name: authors, label: Co-authors, type: string }
+      - { name: url, label: Link, type: string }
+      - { name: pdf, label: PDF link, type: string }
+      - { name: image, label: Cover image, type: image }
+      - { name: image_alt, label: Image description, type: string }
+      - { name: featured, label: Show on the home page, type: boolean, default: false }
+      - { name: note, label: Short description, type: text }
+
+  - name: commentary
+    label: Commentary
+    description: Op-eds and shorter opinion pieces.
+    type: file
+    path: src/_data/commentary.yaml
+    list: true
+    view:
+      fields: [title, year, venue]
+      primary: title
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: year, label: Year, type: number, required: true }
+      - { name: date, label: Full date, type: string,
+          description: "Optional, e.g. 1 August 2026" }
+      - { name: venue, label: Outlet, type: string }
+      - { name: authors, label: Co-authors, type: string }
+      - { name: url, label: Link, type: string }
+      - { name: image, label: Image, type: image }
+      - { name: image_alt, label: Image description, type: string }
+      - { name: lang, label: Language, type: select, default: "",
+          options: { values: [ { label: "English", value: "" },
+                               { label: "French", value: "fr" },
+                               { label: "Arabic", value: "ar" } ] } }
+      - { name: featured, label: Show on the home page, type: boolean, default: false }
+      - { name: note, label: Short description, type: text }
+
+  - name: media
+    label: Media
+    description: Talks, press coverage and affiliations.
+    type: file
+    path: src/_data/media.yaml
+    list: true
+    view:
+      fields: [title, kind, year]
+      primary: title
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: kind, label: Section, type: select, required: true, default: talk,
+          description: "Which part of the Media page this appears in.",
+          options: { values: [ { label: "Talk or panel", value: talk },
+                               { label: "Press", value: press },
+                               { label: "Affiliation", value: affiliation } ] } }
+      - { name: year, label: Year, type: number, required: true }
+      - { name: date, label: Full date, type: string }
+      - { name: venue, label: Host or outlet, type: string }
+      - { name: url, label: Link, type: string }
+      - { name: image, label: Image, type: image }
+      - { name: image_alt, label: Image description, type: string }
+      - { name: note, label: Short description, type: text }
+
+  - name: projects
+    label: Projects
+    description: Books and longer-running work.
+    type: file
+    path: src/_data/projects.yaml
+    list: true
+    view:
+      fields: [title, year, status]
+      primary: title
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: year, label: Year, type: number, required: true }
+      - { name: venue, label: Publisher, type: string }
+      - { name: status, label: Status, type: string,
+          description: "e.g. Forthcoming, In development" }
+      - { name: url, label: Link, type: string }
+      - { name: image, label: Image, type: image }
+      - { name: image_alt, label: Image description, type: string }
+      - { name: featured, label: Show on the home page, type: boolean, default: true }
+      - { name: note, label: Description, type: text }
+
+  # ---------------------------------------------------------------- pages
+
+  - name: about
+    label: About page
+    description: The full biography.
+    type: file
+    path: src/about.md
+    fields:
+      - { name: body, label: Biography, type: rich-text,
+          description: "The whole About page. Headings, bold, italics, links and lists all work." }
+
+  - name: pages
+    label: Page text
+    description: Headings and intro paragraphs for each page.
+    type: file
+    path: src/_data/pages.yaml
+    fields:
+      - name: home
+        label: Home page
+        type: object
+        fields:
+          - { name: latest_heading, label: "Heading above recent work", type: string }
+          - { name: progress_heading, label: "Heading above ongoing projects", type: string }
+          - { name: about_heading, label: "Heading above the short biography", type: string }
+          - { name: bio_button, label: "Biography button wording", type: string }
+          - { name: contact_button, label: "Contact button wording", type: string }
+      - name: articles
+        label: Articles page
+        type: object
+        fields:
+          - { name: nav_title, label: "Menu and browser tab wording", type: string }
+          - { name: heading, label: "Page heading", type: string }
+          - { name: intro, label: "Intro paragraph", type: text }
+          - { name: seo, label: "Search engine summary", type: text,
+              description: "Shown by Google and when the page is shared. Not visible on the page." }
+      - name: reports
+        label: Reports page
+        type: object
+        fields:
+          - { name: nav_title, label: "Menu and browser tab wording", type: string }
+          - { name: heading, label: "Page heading", type: string }
+          - { name: intro, label: "Intro paragraph", type: text }
+          - { name: seo, label: "Search engine summary", type: text }
+      - name: commentary
+        label: Commentary page
+        type: object
+        fields:
+          - { name: nav_title, label: "Menu and browser tab wording", type: string }
+          - { name: heading, label: "Page heading", type: string }
+          - { name: intro, label: "Intro paragraph", type: text }
+          - { name: seo, label: "Search engine summary", type: text }
+      - name: media
+        label: Media page
+        type: object
+        fields:
+          - { name: nav_title, label: "Menu and browser tab wording", type: string }
+          - { name: heading, label: "Page heading", type: string }
+          - { name: intro, label: "Intro paragraph", type: text }
+          - { name: seo, label: "Search engine summary", type: text }
+          - { name: talks_heading, label: "Talks section heading", type: string }
+          - { name: press_heading, label: "Press section heading", type: string }
+          - { name: affiliations_heading, label: "Affiliations section heading", type: string }
+      - name: projects
+        label: Projects page
+        type: object
+        fields:
+          - { name: nav_title, label: "Menu and browser tab wording", type: string }
+          - { name: heading, label: "Page heading", type: string }
+          - { name: intro, label: "Intro paragraph", type: text }
+          - { name: seo, label: "Search engine summary", type: text }
+      - name: about
+        label: About page headings
+        type: object
+        fields:
+          - { name: nav_title, label: "Menu and browser tab wording", type: string }
+          - { name: heading, label: "Page heading", type: string }
+          - { name: seo, label: "Search engine summary", type: text }
+      - name: ui
+        label: Buttons and labels
+        type: object
+        fields:
+          - { name: filter_placeholder, label: "Filter box wording", type: string }
+          - { name: pdf_label, label: "PDF button wording", type: string }
+          - { name: skip_link, label: "Skip-to-content link", type: string }
+          - { name: menu_label, label: "Mobile menu label", type: string }
+
+  # ---------------------------------------------------------------- settings
+
+  - name: site
+    label: Site settings
+    description: Name, tagline, short biography, contact links and the menu.
+    type: file
+    path: src/_data/site.yaml
+    fields:
+      - { name: name, label: Your name, type: string, required: true }
+      - { name: tagline, label: Tagline, type: string,
+          description: "Shown under your name on the home page." }
+      - { name: themes, label: Themes line, type: string,
+          description: "The larger line under the tagline. Keep the middle dots." }
+      - { name: description, label: Site description, type: text,
+          description: "Used by search engines for the home page." }
+      - { name: about, label: Short biography, type: text, list: true,
+          description: "Each box is one paragraph on the home page. Add, remove or reorder." }
+      - { name: currently, label: "\"Currently\" line", type: text,
+          description: "The highlighted line at the foot of the home page." }
+      - { name: email, label: Email address, type: string,
+          description: "Leave empty to hide the contact link and button." }
+      - { name: linkedin, label: LinkedIn URL, type: string }
+      - name: nav
+        label: Menu
+        type: object
+        list: true
+        description: "Drag to reorder. You cannot create a broken link."
+        fields:
+          - { name: label, label: Wording, type: string, required: true }
+          - { name: page, label: Goes to, type: select, required: true,
+              options: { values: [articles, reports, commentary, media, projects, about, home] } }

@@ -1,4 +1,5 @@
-# Site-wide settings. Edit the tagline, themes and bio here.
+# SITE SETTINGS — name, tagline, biography, contact links and the menu.
+
 name: "Alice Hamilton Farmer"
 tagline: "Refugee Lawyer · Researcher · Writer"
 description: "Alice Hamilton Farmer is an international lawyer working on refugee law, forced displacement and climate mobility."
@@ -27,13 +28,15 @@ currently: >
   Currently writing on climate displacement and building a proof of concept for a climate
   change law lab.
 
-email: ""            # leave empty to hide the contact link
+email: ""            # leave empty to hide the contact link and button
 linkedin: "https://www.linkedin.com/in/alice-farmer-8920979/"
 
+# The menu. "label" is the wording shown; "page" chooses which page it points to.
+# Reorder by dragging. You cannot create a broken link — "page" only offers real pages.
 nav:
-  - { text: "Articles", url: "/articles/" }
-  - { text: "Reports", url: "/reports/" }
-  - { text: "Commentary", url: "/commentary/" }
-  - { text: "Media", url: "/media/" }
-  - { text: "Projects", url: "/projects/" }
-  - { text: "About", url: "/about/" }
+  - { label: "Articles",   page: articles }
+  - { label: "Reports",    page: reports }
+  - { label: "Commentary", page: commentary }
+  - { label: "Media",      page: media }
+  - { label: "Projects",   page: projects }
+  - { label: "About",      page: about }

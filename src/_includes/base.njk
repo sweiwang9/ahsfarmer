@@ -14,19 +14,22 @@
 </head>
 <body>
 
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">{{ pages.ui.skip_link or "Skip to content" }}</a>
 
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="wordmark" href="{{ '/' | url }}">{{ site.name }}</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
       <span class="nav-toggle-bar"></span>
-      <span class="visually-hidden">Menu</span>
+      <span class="visually-hidden">{{ pages.ui.menu_label or "Menu" }}</span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul>
         {% for item in site.nav %}
-        <li><a href="{{ item.url | url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.text }}</a></li>
+        {% set target = routes[item.page] %}
+        {% if target %}
+        <li><a href="{{ target | url }}"{% if page.url == target %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {% endif %}
         {% endfor %}
       </ul>
     </nav>

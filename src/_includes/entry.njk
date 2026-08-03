@@ -1,6 +1,6 @@
 <li class="entry"{% if entry.lang %} lang="{{ entry.lang }}"{% endif %}>
   {% if entry.image %}
-  <img class="entry-thumb" src="{{ ('/assets/img/' + entry.image) | url }}" alt="" width="84" height="109" loading="lazy" decoding="async">
+  <img class="entry-thumb" src="{{ entry.image | url }}" alt="{{ entry.image_alt or '' }}" width="84" height="109" loading="lazy" decoding="async">
   {% else %}
   <span class="entry-thumb" aria-hidden="true"></span>
   {% endif %}
@@ -16,6 +16,6 @@
       {% if entry.status %}<span class="status">{{ entry.status }}</span>{% endif %}
     </p>
     {% if entry.note %}<p class="entry-note">{{ entry.note }}</p>{% endif %}
-    {% if entry.pdf %}<p class="entry-links"><a class="pdf" href="{{ entry.pdf }}">PDF</a></p>{% endif %}
+    {% if entry.pdf %}<p class="entry-links"><a class="pdf" href="{{ entry.pdf }}">{{ pages.ui.pdf_label or "PDF" }}</a></p>{% endif %}
   </div>
 </li>

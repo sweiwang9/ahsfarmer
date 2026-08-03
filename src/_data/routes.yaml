@@ -1,0 +1,13 @@
+# Route map. NOT editable through the CMS — it is the fixed list of real pages,
+# and the navigation menu picks from it by key.
+#
+# Adding a page here without also creating its template will produce a dead link,
+# which is exactly why this file is kept out of the editor.
+
+home: "/"
+articles: "/articles/"
+reports: "/reports/"
+commentary: "/commentary/"
+media: "/media/"
+projects: "/projects/"
+about: "/about/"

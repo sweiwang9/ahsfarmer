@@ -1,32 +1,33 @@
 ---
 layout: base.njk
-title: Media
 permalink: /media/
-description: "Talks, panels, press coverage and affiliations of Alice Hamilton Farmer."
+eleventyComputed:
+  title: "{{ pages.media.nav_title or 'Media' }}"
+  description: "{{ pages.media.seo }}"
 ---
 <div class="page-header">
-  <h1>Media &amp; public engagement</h1>
-  <p>Talks and panels, press coverage of the research, and current affiliations.</p>
+  <h1>{{ pages.media.heading or "Media & public engagement" }}</h1>
+  <p>{{ pages.media.intro }}</p>
 </div>
 
 {% include "filter.njk" %}
 
 <section class="entry-section">
-  <h2 class="section-heading">Talks &amp; panels</h2>
+  <h2 class="section-heading">{{ pages.media.talks_heading or "Talks & panels" }}</h2>
   {% set entries = media | where("kind", "talk") %}
   {% set showYears = true %}
   {% include "entry-list.njk" %}
 </section>
 
 <section class="entry-section">
-  <h2 class="section-heading">Press</h2>
+  <h2 class="section-heading">{{ pages.media.press_heading or "Press" }}</h2>
   {% set entries = media | where("kind", "press") %}
   {% set showYears = true %}
   {% include "entry-list.njk" %}
 </section>
 
 <section class="entry-section">
-  <h2 class="section-heading">Affiliations</h2>
+  <h2 class="section-heading">{{ pages.media.affiliations_heading or "Affiliations" }}</h2>
   {% set entries = media | where("kind", "affiliation") %}
   {% set showYears = false %}
   {% include "entry-list.njk" %}

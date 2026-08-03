@@ -1,6 +1,6 @@
 {# One filter box per page. The script filters every .entry on the page. #}
 <div class="filter">
   <label for="filter-input" class="visually-hidden">Filter this page</label>
-  <input id="filter-input" type="search" placeholder="{{ filterPlaceholder or 'Filter by title, venue or year…' }}" autocomplete="off">
+  <input id="filter-input" type="search" placeholder="{{ pages.ui.filter_placeholder or 'Filter by title, venue or year…' }}" autocomplete="off">
   <p class="filter-status" role="status" aria-live="polite"></p>
 </div>

@@ -1,140 +1,141 @@
-# How to update the website
+# How to update your website
 
-You don't need to install anything. Everything is done in the browser.
+Everything is done through one page in your browser. You don't need to install anything,
+and you don't need a GitHub account.
 
-There are only **six files** you will ever edit, and they all live in one folder:
-`src/_data/`.
+**Your editor:** [app.pagescms.org](https://app.pagescms.org)
 
-| To add or change… | Edit this file |
+Sign in with the link emailed to you. You'll see your site with a list of sections down the
+left-hand side.
+
+---
+
+## What each section does
+
+| Section | What lives there |
 |---|---|
-| A law journal or peer-reviewed article | `src/_data/articles.yaml` |
-| A research report | `src/_data/reports.yaml` |
-| An op-ed or short piece | `src/_data/commentary.yaml` |
-| A talk, press mention or affiliation | `src/_data/media.yaml` |
-| A book or ongoing project | `src/_data/projects.yaml` |
-| Your name, tagline, bio, contact links | `src/_data/site.yaml` |
+| **Articles** | Law journal and peer-reviewed articles |
+| **Reports** | Field research reports |
+| **Commentary** | Op-eds and shorter pieces |
+| **Media** | Talks, press coverage, affiliations |
+| **Projects** | Books and longer-running work |
+| **About page** | Your full biography |
+| **Page text** | The heading and intro paragraph on each page |
+| **Site settings** | Your name, tagline, short bio, contact links, menu |
+| **Media** (library) | All your images in one place |
 
 ---
 
 ## Adding a publication
 
-1. Go to the repository on github.com and open the file from the table above.
-2. Click the **pencil icon** (top right of the file) to edit it.
-3. Find the entry at the very top. **Select those lines, copy them, and paste them just above.**
-4. Change the values in your new copy.
-5. Scroll to the bottom and click the green **Commit changes** button.
-6. Wait about a minute, then reload the website. Your entry will be there.
+1. Click the section it belongs in — say **Articles**.
+2. Click **Add entry**.
+3. Fill in the form. Only **Title** and **Year** are required.
+4. Click **Save**.
 
-That's it. New entries go at the top of the file; the website sorts everything by year
-automatically, so the order inside the file doesn't matter much — but keeping newest at the
-top makes it easier to find things.
+Your site updates about a minute later.
 
----
+### The fields
 
-## What an entry looks like
-
-```yaml
-- title: "The Discretion Loophole: Executive Power and International Refugee Law"
-  year: 2025
-  venue: "36 Stanford Law & Policy Review 1"
-  url: "https://law.stanford.edu/publications/the-discretion-loophole/"
-  pdf: "https://law.stanford.edu/wp-content/uploads/2025/08/farmer.pdf"
-  featured: true
-  note: "One or two sentences about the piece."
-```
-
-Only three things are actually required: `title`, `year`, and either a `url` or a `pdf`.
-Everything else is optional — leave a line out entirely if you don't need it.
-
-| Field | What it does |
+| Field | What it's for |
 |---|---|
-| `title` | The headline. Always in quotes. |
-| `year` | Four digits. Used for sorting and the year headings. |
-| `venue` | Journal, publisher or outlet. |
-| `authors` | Only for co-authored work, e.g. `"with Katerina Linos"` |
-| `date` | A fuller date if you want one shown, e.g. `"20 May 2013"` |
-| `url` | Where the piece lives. Makes the title clickable. |
-| `pdf` | Adds a small PDF button. |
-| `note` | A sentence of context, shown under the entry. |
-| `featured` | `true` pins it to the home page. Delete the line to unpin. |
-| `lang` | Only for non-English pieces: `"fr"` for French, `"ar"` for Arabic. |
-| `image` | The picture shown to the left. A filename from `src/assets/img/`. |
-| `kind` | **Media only.** Must be `press`, `talk` or `affiliation` — this decides which section of the Media page it appears in. |
+| **Title** | The headline |
+| **Year** | Four digits. The site groups the list by year automatically |
+| **Journal or publisher** | e.g. *36 Stanford Law & Policy Review 1* |
+| **Co-authors** | Only if co-written, e.g. *with Katerina Linos* |
+| **Link** | Where it can be read. Makes the title clickable |
+| **PDF link** | Optional. Adds a small PDF button |
+| **Cover image** | The picture on the left. See below |
+| **Image description** | For blind readers. See below |
+| **Show on the home page** | Pins it to the "Latest" list |
+| **Short description** | A sentence or two shown under the entry |
 
 ---
 
-## Adding the picture
+## Images
 
-Each entry shows a small image on the left — a journal cover, a report cover, or a tile
-with the publication's name on it.
+Click the **Cover image** field and you can either **pick an existing image** from your
+library or **drag in a new file**.
 
-**To reuse an existing one**, just point at it. Open `src/assets/img/` to see what's there
-and copy the filename:
+To **change** an image, click it and choose or upload a different one. To **remove** it,
+clear the field — the entry still works, it just shows a plain tile.
 
-```yaml
-image: "hrw.svg"          # the Human Rights Watch tile
-image: "fmr.svg"          # the Forced Migration Review tile
-```
+**You don't need to worry about file size.** If you upload a large photo straight from your
+phone, the site shrinks it automatically when it publishes. A 4 MB photo becomes about
+30 KB without you doing anything.
 
-**To add a new cover**, drag the image file into `src/assets/img/` on GitHub (open the
-folder, then **Add file → Upload files**), and reference its filename. A portrait-shaped
-image around 240×312 pixels looks best.
+Portrait-shaped images look best, roughly the proportions of a book cover.
 
-If you leave `image` out entirely the entry still works — it just shows a plain grey tile.
-The content check will remind you.
+### Image description
 
----
+This is the text a blind reader's screen reader will announce.
 
-## The one rule that matters
-
-**Put double quotes around anything that is text.**
-
-```yaml
-title: "Turned Away: Summary Returns from Italy to Greece"     ← correct
-title: Turned Away: Summary Returns from Italy to Greece       ← breaks the site
-```
-
-The reason is that a colon has a special meaning in these files. Since most of your titles
-contain a colon, quoting everything is the safe habit. Numbers (`year: 2025`) and
-true/false (`featured: true`) are the exceptions — those go **without** quotes.
-
-If your title itself contains a double quote, use single quotes around the whole thing:
-
-```yaml
-title: 'A Real Life "Hunger Games"'
-```
+- **Leave it blank** for a journal cover or a publisher's logo — the title next to it
+  already says everything, and a blank description tells the screen reader to skip it.
+- **Fill it in** for a photograph or anything carrying real information, e.g.
+  *"Alice speaking on a panel at Oxford."*
 
 ---
 
-## If something goes wrong
+## Editing the words on a page
 
-**The website will not break.** If an edit has a mistake in it, the site simply keeps
-showing the previous version until it's fixed. Nothing bad becomes visible to the public.
+**Page text** holds the heading and the intro paragraph for each page — the wording under
+"Articles", "Reports", and so on. Pick the page, change the text, save.
 
-To see what went wrong:
+Each page also has a **Search engine summary**. That's what Google shows and what appears
+when someone shares the link. It is never visible on the page itself.
 
-1. Go to the **Actions** tab at the top of the repository.
-2. Click the most recent run — it will have a red ✗.
-3. Look for the step called **Validate content**. The error is written in plain English,
-   for example:
-   > `scholarship.yaml: entry 3 has no "year".`
-   > `commentary.yaml: could not be read (around line 24). This is almost always an unquoted ":" in a title.`
+**About page** is your full biography, in a normal text editor with bold, italics, links,
+headings and lists.
 
-Then go back, edit the file, fix that line, and commit again.
+**Site settings** holds your name, tagline, the short biography on the home page, your
+contact links, and the menu.
 
----
+### The menu
 
-## Changing the tagline or bio
+Drag menu items to reorder them. You can change the wording of any item, and **Goes to** is
+a dropdown of your real pages — so you can't accidentally create a link that goes nowhere.
 
-Open `src/_data/site.yaml`. The fields are `tagline`, `intro` (the paragraph on the home
-page), and `currently` (the highlighted line at the bottom of the home page). Edit the text
-between the quotes and commit.
-
-To hide the email link, leave `email: ""` empty.
+To hide the email link and the "Get in touch" button, clear the **Email address** field.
 
 ---
 
 ## Removing something
 
-Delete its lines — from the `- title:` line down to just before the next `- title:` line —
-and commit.
+Open the entry and click **Delete**. It disappears from the site on the next publish.
+
+---
+
+## If something looks wrong
+
+**Your site will not break.** If a change can't be published, the site simply keeps showing
+the previous version. Nothing broken becomes visible to the public.
+
+If a change doesn't appear after a couple of minutes, tell whoever set this up — there's an
+automatic check that explains what went wrong in plain English.
+
+---
+
+## Appendix: editing the files directly
+
+You will almost certainly never need this. It's here in case the editor is ever
+unavailable, because the site works perfectly well without it.
+
+All the content lives as plain text files in the GitHub repository under `src/_data/`. Each
+section is one file — `articles.yaml`, `reports.yaml`, `commentary.yaml`, `media.yaml`,
+`projects.yaml` — plus `pages.yaml` for page wording, `site.yaml` for settings, and
+`about.md` for the biography.
+
+You can edit them on github.com with the pencil icon. One rule matters: **put double quotes
+around anything that is text.**
+
+```yaml
+title: "Turned Away: Summary Returns from Italy to Greece"     ← correct
+title: Turned Away: Summary Returns from Italy to Greece       ← breaks the publish
+```
+
+A colon has a special meaning in those files, and most titles contain one. Numbers
+(`year: 2026`) and true/false (`featured: true`) go **without** quotes.
+
+Images are written as a full path, e.g. `image: "/assets/img/penn-jil-2026.jpg"`, and the
+file itself lives in `src/assets/img/`.

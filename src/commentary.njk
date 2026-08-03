@@ -1,12 +1,13 @@
 ---
 layout: base.njk
-title: Commentary
 permalink: /commentary/
-description: "Op-eds and short commentary by Alice Hamilton Farmer, published in JURIST, The Huffington Post, European Voice, The Hill and elsewhere."
+eleventyComputed:
+  title: "{{ pages.commentary.nav_title or 'Commentary' }}"
+  description: "{{ pages.commentary.seo }}"
 ---
 <div class="page-header">
-  <h1>Commentary</h1>
-  <p>Shorter opinion writing, most of it from the years at Human Rights Watch and the ACLU. Several of the original outlets have since closed; these links point to the versions Human Rights Watch republished.</p>
+  <h1>{{ pages.commentary.heading or "Commentary" }}</h1>
+  <p>{{ pages.commentary.intro }}</p>
 </div>
 
 {% include "filter.njk" %}

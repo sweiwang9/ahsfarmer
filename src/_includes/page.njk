@@ -1,0 +1,12 @@
+{# Layout for prose pages. Keeps the heading and wrapper markup out of the
+   Markdown file, so the body can be edited safely in a rich-text editor. #}
+---
+layout: base.njk
+---
+<div class="page-header">
+  <h1>{{ heading or title }}</h1>
+</div>
+
+<div class="prose">
+{{ content | safe }}
+</div>

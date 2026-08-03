@@ -10,7 +10,7 @@
   venue: "47 University of Pennsylvania Journal of International Law 4"
   url: "https://www.pennlawjil.com/volume47issue4"
   pdf: "https://www.pennlawjil.com/s/2-Author-Approved_Farmer-Formatted-UPDATED.pdf"
-  image: "penn-jil-2026.jpg"
+  image: "/assets/img/penn-jil-2026.jpg"
   featured: true
   note: "Reconceives climate displacement as a long problem rather than a short-term emergency, through two case studies: small-scale fishing communities in the global south, and residential property in the United States."
 
@@ -19,7 +19,7 @@
   venue: "36 Stanford Law & Policy Review 1"
   url: "https://law.stanford.edu/publications/the-discretion-loophole-executive-power-international-refugee-law-and-the-erosion-of-asylum-protections-in-the-united-states/"
   pdf: "https://law.stanford.edu/wp-content/uploads/2025/08/36-Stan.-L.-Poly-Rev.-1-2025-Farmer-The-Discretion-Loophole.pdf"
-  image: "stanford-discretion-2025.jpg"
+  image: "/assets/img/stanford-discretion-2025.jpg"
   featured: true
   note: "Argues that successive administrations have used the discretion provision in US asylum law as an end-run around Congress, in conflict with international obligations."
 
@@ -28,7 +28,7 @@
   venue: "119 AJIL Unbound"
   url: "https://doi.org/10.1017/aju.2025.10004"
   pdf: "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/944815FBE4F164B971F8CBF171646958/S2398772325100044a.pdf/migrating-with-dignity-a-human-rights-case-for-facilitated-community-led-financial-interventions-in-climate-vulnerable-areas.pdf"
-  image: "ajil-migrating-dignity-2025.jpg"
+  image: "/assets/img/ajil-migrating-dignity-2025.jpg"
   featured: true
   note: "Part of the Financing Climate Mobility symposium."
 
@@ -38,27 +38,27 @@
   authors: "with Katerina Linos"
   url: "https://doi.org/10.1017/aju.2025.10000"
   pdf: "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/D898A556D97D2BB4830CA144BE10FC3E/S2398772325100007a.pdf/tools-to-finance-climate-mobility-an-introduction-to-the-symposium.pdf"
-  image: "ajil-tools-2025.jpg"
+  image: "/assets/img/ajil-tools-2025.jpg"
   note: "Introduction to the Financing Climate Mobility symposium, which she co-edited."
 
 - title: "Remarks by Alice Farmer (as Summarized by the Moderator)"
   year: 2019
   venue: "113 Proceedings of the ASIL Annual Meeting"
   url: "https://doi.org/10.1017/amp.2019.160"
-  image: "asil.svg"
+  image: "/assets/img/asil.svg"
   note: "Panel on the Law (and Politics) of Displacement, ASIL Annual Meeting."
 
 - title: "Finding a New Balance: Bringing Together Children's Rights Law and Migration Policy for Effective Protection of Migrant Children"
   year: 2018
   venue: "Research Handbook on Child Migration (Edward Elgar)"
   url: "https://doi.org/10.4337/9781786433701.00022"
-  image: "elgar.svg"
+  image: "/assets/img/elgar.svg"
 
 - title: "The Impact of Immigration Detention on Children"
   year: 2013
   venue: "Forced Migration Review 44, University of Oxford"
   url: "https://www.fmreview.org/farmer-2/"
-  image: "fmr.svg"
+  image: "/assets/img/fmr.svg"
   note: "Also published in French and Arabic."
 
 - title: "A Commentary on the Committee on the Rights of the Child's Definition of Non-Refoulement for Children: Broad Protection for Fundamental Rights"
@@ -66,23 +66,23 @@
   venue: "80 Fordham Law Review Res Gestae 39"
   url: "https://ir.lawnet.fordham.edu/res_gestae/8/"
   pdf: "https://fordhamlawreview.org/wp-content/uploads/2016/01/39_Farmer.pdf"
-  image: "fordham-2011.jpg"
+  image: "/assets/img/fordham-2011.jpg"
 
 - title: "Keeping Schools Open: Education in Conflict"
   year: 2011
   venue: "Forced Migration Review, University of Oxford"
   url: "https://www.fmreview.org/farmer/"
-  image: "fmr.svg"
+  image: "/assets/img/fmr.svg"
 
 - title: "Non-Refoulement and Jus Cogens: Limiting Anti-Terror Measures That Threaten Refugee Protection"
   year: 2008
   venue: "23 Georgetown Immigration Law Journal 1"
   url: "https://www.semanticscholar.org/paper/5c391bc36799a7523f63c5a5fb62e9c21ce9fe33"
-  image: "georgetown.svg"
+  image: "/assets/img/georgetown.svg"
 
 - title: "Refugee Responses, State-Like Behavior, and Accountability for Human Rights Violations: A Case Study of Sexual Violence in Guinea's Refugee Camps"
   year: 2006
   venue: "9 Yale Human Rights & Development Law Journal 44"
   url: "https://openyls.law.yale.edu/handle/20.500.13051/3"
   pdf: "https://openyls.law.yale.edu/server/api/core/bitstreams/bcf1367f-9c49-4439-9392-21eab00250c8/content"
-  image: "yale-hrdlj-2006.jpg"
+  image: "/assets/img/yale-hrdlj-2006.jpg"

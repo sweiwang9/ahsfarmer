@@ -1,7 +1,7 @@
 # PROJECTS — books and longer-running work.
 
 - title: "Climate Change, Migration, Gender, and the Law"
-  image: "elgar.svg"
+  image: "/assets/img/elgar.svg"
   year: 2026
   venue: "Edward Elgar, forthcoming"
   status: "Forthcoming"
@@ -11,7 +11,7 @@
     climate-driven displacement. Under contract with Edward Elgar.
 
 - title: "Climate Change Law Lab"
-  image: "casbs.svg"
+  image: "/assets/img/casbs.svg"
   year: 2025
   venue: "In development"
   status: "In development"

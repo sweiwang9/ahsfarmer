@@ -1,12 +1,13 @@
 ---
 layout: base.njk
-title: Articles
 permalink: /articles/
-description: "Law journal and peer-reviewed articles by Alice Hamilton Farmer on refugee law, non-refoulement, children's rights and climate displacement."
+eleventyComputed:
+  title: "{{ pages.articles.nav_title or 'Articles' }}"
+  description: "{{ pages.articles.seo }}"
 ---
 <div class="page-header">
-  <h1>Articles</h1>
-  <p>Law journal and peer-reviewed writing on refugee protection, non-refoulement, the rights of children in displacement, and the law of climate mobility.</p>
+  <h1>{{ pages.articles.heading or "Articles" }}</h1>
+  <p>{{ pages.articles.intro }}</p>
 </div>
 
 {% include "filter.njk" %}

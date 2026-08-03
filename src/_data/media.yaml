@@ -11,7 +11,7 @@
   venue: "CASBS, Stanford University"
   kind: talk
   url: "https://www.youtube.com/watch?v=T-5fbEucRR0"
-  image: "casbs-podcast-2026.jpg"
+  image: "/assets/img/casbs-podcast-2026.jpg"
   note: "Podcast conversation on the legal and policy response to climate-driven displacement."
 
 - title: "Women in Refugee Law — Climate Change, Displacement and Gender"
@@ -20,7 +20,7 @@
   venue: "Women in Refugee Law Network"
   kind: talk
   url: "https://wirl.org.uk/wp-content/uploads/2024/10/WiRL-CC3-Speaker-Biographies.pdf"
-  image: "wirl.svg"
+  image: "/assets/img/wirl.svg"
 
 - title: "Panel on Conflict, Climate & Displacement"
   year: 2024
@@ -28,14 +28,14 @@
   venue: "Duke University"
   kind: talk
   url: "https://climatemigration.duke.edu/policy-impact/panel-on-conflict-climate-displacement/"
-  image: "duke.svg"
+  image: "/assets/img/duke.svg"
 
 - title: "Berger International Speaker Series: International Refugee Norms and Their Implementation in the United States"
   year: 2024
   venue: "Cornell Law School"
   kind: talk
   url: "https://vod.video.cornell.edu/media/Berger+International+Speaker+Series+with+Alice+FarmerA+International+Refugee+Norms+and+Their+Implementation+in+the+United+States/1_azleqzlm"
-  image: "cornell.svg"
+  image: "/assets/img/cornell.svg"
   note: "Recorded lecture. Date needs confirming."
 
 - title: "Conversation with Melissa Johns and Alice Farmer of UNHCR"
@@ -43,7 +43,7 @@
   venue: "Stanford Law School"
   kind: talk
   url: "https://law.stanford.edu/events-archive/conversation-with-melissa-johns-and-alice-farmer-of-unhcr/"
-  image: "stanford-law.svg"
+  image: "/assets/img/stanford-law.svg"
   note: "Date needs confirming."
 
 - title: "Nothing About Us Without Us: Putting Refugees at the Center of Cause Lawyering"
@@ -51,7 +51,7 @@
   venue: "Harvard Law School International Human Rights Clinic"
   kind: talk
   url: "https://humanrightsclinic.law.harvard.edu/nothing-about-us-without-us-putting-refugees-at-the-center-of-cause-lawyering/"
-  image: "harvard-ihrc.svg"
+  image: "/assets/img/harvard-ihrc.svg"
   note: "Date needs confirming."
 
 - title: "Global Refugee Issues Forum"
@@ -59,7 +59,7 @@
   venue: "St Mark's Episcopal Church, Capitol Hill"
   kind: talk
   url: "https://saint-marks.com/event/global-refugee-issues-forum-with-alice-farmer/"
-  image: "st-marks.svg"
+  image: "/assets/img/st-marks.svg"
   note: "Date needs confirming."
 
 # ---------- press ----------
@@ -70,7 +70,7 @@
   venue: "Human Rights Watch"
   kind: press
   url: "https://www.hrw.org/news/2014/09/01/thailand-migrant-children-locked"
-  image: "hrw.svg"
+  image: "/assets/img/hrw.svg"
   note: "\"Migrant children detained in Thailand are suffering needlessly in filthy, overcrowded cells.\""
 
 - title: "Confronting Refugee Abuse in Indonesia's Detention Centers"
@@ -79,7 +79,7 @@
   venue: "Human Rights Watch"
   kind: press
   url: "https://www.hrw.org/news/2013/07/01/confronting-refugee-abuse-indonesias-detention-centers"
-  image: "hrw.svg"
+  image: "/assets/img/hrw.svg"
 
 - title: "Human Rights Watch Criticizes Indonesia over Treatment of Migrant, Asylum-Seeking Children"
   year: 2013
@@ -87,7 +87,7 @@
   venue: "Associated Press"
   kind: press
   url: "https://www.foxnews.com/world/human-rights-watch-criticizes-indonesia-over-treatment-of-migrant-asylum-seeking-children.amp"
-  image: "ap.svg"
+  image: "/assets/img/ap.svg"
 
 - title: "Indonesia: Children Seeking Refuge Find Abuse, Neglect"
   year: 2013
@@ -95,7 +95,7 @@
   venue: "Human Rights Watch"
   kind: press
   url: "https://www.hrw.org/news/2013/06/24/indonesia-children-seeking-refuge-find-abuse-neglect"
-  image: "hrw.svg"
+  image: "/assets/img/hrw.svg"
   note: "\"Migrant children in Indonesia are trapped in a prolonged waiting game with no certain outcome.\""
 
 - title: "Italy: Summary Returns to Greece Violate Rights"
@@ -104,7 +104,7 @@
   venue: "Human Rights Watch"
   kind: press
   url: "https://www.hrw.org/news/2013/01/22/italy-summary-returns-greece-violate-rights"
-  image: "hrw.svg"
+  image: "/assets/img/hrw.svg"
 
 - title: "Malta: Migrant Detention Violates Rights"
   year: 2012
@@ -112,7 +112,7 @@
   venue: "Human Rights Watch"
   kind: press
   url: "https://www.hrw.org/news/2012/07/18/malta-migrant-detention-violates-rights"
-  image: "hrw.svg"
+  image: "/assets/img/hrw.svg"
   note: "\"Malta's automatic, indiscriminate, and blanket detention of migrants is inhumane and unnecessary.\""
 
 # ---------- affiliations ----------
@@ -122,11 +122,11 @@
   venue: "Center for Advanced Study in the Behavioral Sciences, Stanford University"
   kind: affiliation
   url: "https://casbs.stanford.edu/people/alice-farmer"
-  image: "casbs.svg"
+  image: "/assets/img/casbs.svg"
 
 - title: "Visiting Fellow, Trinity Term 2024"
   year: 2024
   venue: "Refugee Studies Centre, University of Oxford"
   kind: affiliation
   url: "https://www.rsc.ox.ac.uk/news/introducing-our-visiting-fellows-for-trinity-term-2024"
-  image: "oxford-rsc.svg"
+  image: "/assets/img/oxford-rsc.svg"

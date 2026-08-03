@@ -12,23 +12,23 @@ fullBleed: true
 
 <div class="wrap">
 
-<h2 class="section-heading">Latest</h2>
-{% set entries = articles | featured | withLabel("Articles") | concat(
-                 reports | featured | withLabel("Reports"),
-                 commentary | featured | withLabel("Commentary")) %}
+<h2 class="section-heading">{{ pages.home.latest_heading or "Latest" }}</h2>
+{% set entries = articles | featured | withLabel(pages.articles.nav_title or "Articles") | concat(
+                 reports | featured | withLabel(pages.reports.nav_title or "Reports"),
+                 commentary | featured | withLabel(pages.commentary.nav_title or "Commentary")) %}
 {% set showYears = false %}
 {% include "entry-list.njk" %}
 
-<h2 class="section-heading">In progress</h2>
-{% set entries = projects | featured | withLabel("Project") %}
+<h2 class="section-heading">{{ pages.home.progress_heading or "In progress" }}</h2>
+{% set entries = projects | featured | withLabel(pages.projects.nav_title or "Projects") %}
 {% include "entry-list.njk" %}
 
-<h2 class="section-heading">About Alice</h2>
+<h2 class="section-heading">{{ pages.home.about_heading or "About" }}</h2>
 <div class="about-block">
   {% for para in site.about %}<p>{{ para }}</p>{% endfor %}
   <div class="buttons">
-    <a class="btn btn-solid" href="{{ '/about/' | url }}">Read full bio</a>
-    {% if site.email %}<a class="btn btn-ghost" href="mailto:{{ site.email }}">Get in touch</a>{% endif %}
+    <a class="btn btn-solid" href="{{ routes.about | url }}">{{ pages.home.bio_button or "Read full bio" }}</a>
+    {% if site.email %}<a class="btn btn-ghost" href="mailto:{{ site.email }}">{{ pages.home.contact_button or "Get in touch" }}</a>{% endif %}
   </div>
 </div>
 

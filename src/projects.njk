@@ -1,12 +1,13 @@
 ---
 layout: base.njk
-title: Projects
 permalink: /projects/
-description: "Book projects and longer-running work by Alice Hamilton Farmer, including a forthcoming Edward Elgar edited volume on climate change, migration, gender and the law."
+eleventyComputed:
+  title: "{{ pages.projects.nav_title or 'Projects' }}"
+  description: "{{ pages.projects.seo }}"
 ---
 <div class="page-header">
-  <h1>Projects</h1>
-  <p>Books and longer-running work.</p>
+  <h1>{{ pages.projects.heading or "Projects" }}</h1>
+  <p>{{ pages.projects.intro }}</p>
 </div>
 
 {% set entries = projects %}
