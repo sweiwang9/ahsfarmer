@@ -61,8 +61,12 @@ for (const name of LISTS) {
       if (entry[key] && !/^https?:\/\//.test(entry[key]))
         fail(file, `${label} has a "${key}" that doesn't start with http:// or https://.`);
     }
-    if (entry.featured !== undefined && typeof entry.featured !== "boolean")
-      fail(file, `${label} has "featured: ${entry.featured}" — must be true or false, unquoted.`);
+    for (const flag of ["featured", "hidden"]) {
+      if (entry[flag] !== undefined && typeof entry[flag] !== "boolean")
+        fail(file, `${label} has "${flag}: ${entry[flag]}" — must be true or false, unquoted.`);
+    }
+    if (entry.featured && entry.hidden)
+      warn(file, `${label} is both shown and hidden on the home page. Hidden wins.`);
     if (name === "media" && !["press", "talk", "affiliation"].includes(entry.kind))
       fail(file, `${label} has kind "${entry.kind}" — must be press, talk, or affiliation.`);
 

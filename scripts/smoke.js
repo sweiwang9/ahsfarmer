@@ -24,8 +24,32 @@ if (!fs.existsSync(OUT)) {
   process.exit(1);
 }
 
+// Minimum entries each page must render. Guards against a page going silently
+// empty while still being valid HTML — which has happened twice, once from a
+// data file exporting the wrong shape.
+const MIN_ENTRIES = {
+  "index.html": 3,
+  "articles/index.html": 1,
+  "reports/index.html": 1,
+  "commentary/index.html": 1,
+  "media/index.html": 1,
+  "projects/index.html": 1,
+};
+
 const files = walk(OUT);
 if (!files.length) problems.push("no HTML files were built at all.");
+
+for (const [rel, min] of Object.entries(MIN_ENTRIES)) {
+  const file = path.join(OUT, rel);
+  if (!fs.existsSync(file)) {
+    problems.push(`${rel}: was not built at all.`);
+    continue;
+  }
+  const count = (fs.readFileSync(file, "utf8").match(/class="entry"/g) || []).length;
+  if (count < min)
+    problems.push(`${rel}: renders ${count} entries, expected at least ${min}. ` +
+      `A data file is probably returning the wrong shape.`);
+}
 
 for (const file of files) {
   const html = fs.readFileSync(file, "utf8");

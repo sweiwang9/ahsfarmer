@@ -29,6 +29,8 @@ content:
       - { name: title, label: Title, type: string, required: true }
       - { name: year, label: Year, type: number, required: true,
           description: "Four digits, e.g. 2026. Used to group the list." }
+      - { name: date, label: Full date, type: string,
+          description: "Optional, e.g. 1 August 2026. Used to order the home page when two pieces share a year." }
       - { name: venue, label: Journal or publisher, type: string,
           description: "e.g. 36 Stanford Law & Policy Review 1" }
       - { name: authors, label: Co-authors, type: string,
@@ -41,7 +43,10 @@ content:
           description: "Drag in a new file or pick an existing one. Large files are shrunk automatically." }
       - { name: image_alt, label: Image description, type: string,
           description: "For screen readers. Leave blank for a plain cover or logo." }
-      - { name: featured, label: Show on the home page, type: boolean, default: false }
+      - { name: featured, label: Show on the home page, type: boolean, default: false,
+          description: "The newest item in each section appears automatically. Tick this to show others too." }
+      - { name: hidden, label: Hide from the home page, type: boolean, default: false,
+          description: "Keeps this out of the home page even if it is the most recent." }
       - { name: note, label: Short description, type: text,
           description: "A sentence or two shown under the entry." }
 
@@ -57,6 +62,8 @@ content:
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: year, label: Year, type: number, required: true }
+      - { name: date, label: Full date, type: string,
+          description: "Optional, e.g. 1 August 2026. Used to order the home page when two pieces share a year." }
       - { name: venue, label: Publisher, type: string,
           description: "e.g. Human Rights Watch, 92 pp." }
       - { name: authors, label: Co-authors, type: string }
@@ -64,7 +71,10 @@ content:
       - { name: pdf, label: PDF link, type: string }
       - { name: image, label: Cover image, type: image }
       - { name: image_alt, label: Image description, type: string }
-      - { name: featured, label: Show on the home page, type: boolean, default: false }
+      - { name: featured, label: Show on the home page, type: boolean, default: false,
+          description: "The newest item in each section appears automatically. Tick this to show others too." }
+      - { name: hidden, label: Hide from the home page, type: boolean, default: false,
+          description: "Keeps this out of the home page even if it is the most recent." }
       - { name: note, label: Short description, type: text }
 
   - name: commentary
@@ -90,7 +100,10 @@ content:
           options: { values: [ { label: "English", value: "" },
                                { label: "French", value: "fr" },
                                { label: "Arabic", value: "ar" } ] } }
-      - { name: featured, label: Show on the home page, type: boolean, default: false }
+      - { name: featured, label: Show on the home page, type: boolean, default: false,
+          description: "The newest item in each section appears automatically. Tick this to show others too." }
+      - { name: hidden, label: Hide from the home page, type: boolean, default: false,
+          description: "Keeps this out of the home page even if it is the most recent." }
       - { name: note, label: Short description, type: text }
 
   - name: media
@@ -115,6 +128,10 @@ content:
       - { name: url, label: Link, type: string }
       - { name: image, label: Image, type: image }
       - { name: image_alt, label: Image description, type: string }
+      - { name: featured, label: Show on the home page, type: boolean, default: false,
+          description: "The newest item in each section appears automatically. Tick this to show others too." }
+      - { name: hidden, label: Hide from the home page, type: boolean, default: false,
+          description: "Keeps this out of the home page even if it is the most recent." }
       - { name: note, label: Short description, type: text }
 
   - name: projects

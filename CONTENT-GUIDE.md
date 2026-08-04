@@ -47,8 +47,31 @@ Your site updates about a minute later.
 | **PDF link** | Optional. Adds a small PDF button |
 | **Cover image** | The picture on the left. See below |
 | **Image description** | For blind readers. See below |
-| **Show on the home page** | Pins it to the "Latest" list |
+| **Show on the home page** | Adds it to the "Latest" list. See below |
+| **Hide from the home page** | Keeps it off, even if it's your newest |
 | **Short description** | A sentence or two shown under the entry |
+
+---
+
+## The "Latest" list on the home page
+
+**It keeps itself up to date. You don't have to do anything.**
+
+Your most recent Article, Report, Commentary piece and Media item each appear
+automatically, and the sections are ordered so that whichever kind of work you published
+most recently comes first. Publish a new article and it moves to the top on its own.
+
+If you want more than one from a section, tick **Show on the home page** on the extra ones.
+They appear alongside the automatic newest, most recent first.
+
+If you'd rather something *didn't* appear — a minor piece that happens to be your newest —
+tick **Hide from the home page**. That always wins.
+
+### When two pieces share a year
+
+Ordering uses the **Full date** when there is one, and falls back to the year. If two
+pieces are both from this year and only one has a full date, fill in the other's date to
+control which leads.
 
 ---
 
