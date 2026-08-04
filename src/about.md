@@ -1,12 +1,5 @@
 ---
-layout: page.njk
-permalink: /about/
-eleventyComputed:
-  title: "{{ pages.about.nav_title or 'About' }}"
-  heading: "{{ pages.about.heading or 'About' }}"
-  description: "{{ pages.about.seo }}"
 ---
-
 Alice Hamilton Farmer is an **Associate Professor of Law at the University of Maine** and a
 **Senior Adviser for Climate Rights International**. For over a decade she was a lawyer
 with UNHCR, the UN Refugee Agency, in offices around the world including the United States.
@@ -32,9 +25,9 @@ detention centres and refugee camps in Malta, Indonesia, Greece, Italy and Thail
 into public schools across the American South.
 
 She was a Fellow at the **Center for Advanced Study in the Behavioral Sciences** at
-Stanford and a Visiting Fellow at the **Refugee Studies Centre**, University of Oxford. She
-is building a proof of concept for a climate change law lab, and is co-editing *Climate
-Change, Migration, Gender, and the Law*, forthcoming from Edward Elgar.
+Stanford and a Visiting Fellow at the **Refugee Studies Centre**, University of Oxford. She  
+is building a climate change law lab, and is co-editing *Climate*  
+*Change, Migration, Gender, and the Law*, forthcoming from Edward Elgar.
 
 ## Teaching
 
