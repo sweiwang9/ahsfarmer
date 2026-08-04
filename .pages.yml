@@ -270,6 +270,10 @@ content:
           description: "The highlighted line at the foot of the home page." }
       - { name: email, label: Email address, type: string,
           description: "Leave empty to hide the contact link and button." }
+      - { name: portrait, label: Your photo, type: image,
+          description: "Shown beside your name on the home page. A portrait-shaped photo works best." }
+      - { name: portrait_alt, label: Photo description, type: string,
+          description: "For screen readers, e.g. your name." }
       - { name: linkedin, label: LinkedIn URL, type: string }
       - name: nav
         label: Menu

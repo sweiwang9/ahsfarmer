@@ -10,6 +10,8 @@
 <meta property="og:title" content="{% if title %}{{ title }} — {{ site.name }}{% else %}{{ site.name }}{% endif %}">
 <meta property="og:description" content="{{ description or site.description }}">
 <meta property="og:type" content="website">
+<link rel="preload" href="{{ '/assets/fonts/dm-serif-display-latin.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/dm-sans-latin.woff2' | url }}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
 </head>
 <body>

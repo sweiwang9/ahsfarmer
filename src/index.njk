@@ -3,10 +3,17 @@ layout: base.njk
 fullBleed: true
 ---
 <div class="hero">
-  <div class="wrap">
-    <h1>{{ site.name }}</h1>
-    <p class="tagline">{{ site.tagline }}</p>
-    <p class="themes">{{ site.themes }}</p>
+  <div class="wrap hero-inner">
+    {% if site.portrait %}
+    <img class="hero-portrait" src="{{ site.portrait | url }}"
+         alt="{{ site.portrait_alt or site.name }}" width="240" height="300"
+         fetchpriority="high" decoding="async">
+    {% endif %}
+    <div class="hero-text">
+      <h1>{{ site.name }}</h1>
+      <p class="tagline">{{ site.tagline }}</p>
+      <p class="themes">{{ site.themes }}</p>
+    </div>
   </div>
 </div>
 

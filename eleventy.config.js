@@ -5,6 +5,7 @@ import sharp from "sharp";
 
 // Thumbnails display at 84 CSS px, so 320 comfortably covers 2x screens.
 const MAX_IMAGE_WIDTH = 320;
+const MAX_PORTRAIT_WIDTH = 900;
 const JPEG_QUALITY = 78;
 
 /**
@@ -43,14 +44,17 @@ export default function (eleventyConfig) {
       if (!/\.(jpe?g|png)$/i.test(name)) continue;
       const file = path.join(imgDir, name);
       try {
+        // Listing thumbnails are tiny, but a portrait or banner legitimately needs
+        // to be bigger. Name a file portrait-… or …-hero.jpg to get the larger cap.
+        const cap = /(^portrait-|-hero\.)/i.test(name) ? MAX_PORTRAIT_WIDTH : MAX_IMAGE_WIDTH;
         const before = fs.statSync(file).size;
         const image = sharp(file, { failOn: "none" });
         const { width } = await image.metadata();
-        if (!width || width <= MAX_IMAGE_WIDTH) continue;
+        if (!width || width <= cap) continue;
 
         const isPng = /\.png$/i.test(name);
         const buffer = await image
-          .resize({ width: MAX_IMAGE_WIDTH, withoutEnlargement: true })
+          .resize({ width: cap, withoutEnlargement: true })
           .toFormat(isPng ? "png" : "jpeg",
             isPng ? { compressionLevel: 9 } : { quality: JPEG_QUALITY, mozjpeg: true })
           .toBuffer();
