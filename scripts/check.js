@@ -13,6 +13,7 @@ const LISTS = ["articles", "reports", "commentary", "media", "projects"];
 const BIG_IMAGE_KB = 400;   // above this we nudge, though the build resizes it anyway
 const problems = [];
 const warnings = [];
+const positions = [];   // home page positions, collected to spot duplicates
 
 const fail = (file, msg) => problems.push(`${file}: ${msg}`);
 const warn = (file, msg) => warnings.push(`${file}: ${msg}`);
@@ -67,6 +68,15 @@ for (const name of LISTS) {
     }
     if (entry.featured && entry.hidden)
       warn(file, `${label} is both shown and hidden on the home page. Hidden wins.`);
+
+    if (entry.position !== undefined && entry.position !== null && entry.position !== "") {
+      if (!Number.isFinite(Number(entry.position)))
+        fail(file, `${label} has "position: ${entry.position}" — it must be a number, ` +
+          `or blank for automatic placement.`);
+      else if (entry.hidden)
+        warn(file, `${label} has a home page position but is also hidden. Hidden wins.`);
+      else positions.push({ file, label, at: Number(entry.position) });
+    }
     if (name === "media" && !["press", "talk", "affiliation"].includes(entry.kind))
       fail(file, `${label} has kind "${entry.kind}" — must be press, talk, or affiliation.`);
 
@@ -84,6 +94,20 @@ for (const name of LISTS) {
           `automatically, but a smaller original keeps the repository light.`);
     }
   });
+}
+
+/* ---------- home page positions ---------- */
+
+const byPosition = new Map();
+for (const p of positions) {
+  if (!byPosition.has(p.at)) byPosition.set(p.at, []);
+  byPosition.get(p.at).push(p);
+}
+for (const [at, entries] of byPosition) {
+  if (entries.length > 1)
+    warn("home page order", `position ${at} is used by ${entries.length} entries ` +
+      `(${entries.map((e) => e.file).join(", ")}). They will appear newest first ` +
+      `among themselves — give them different numbers to be sure of the order.`);
 }
 
 /* ---------- routes ---------- */

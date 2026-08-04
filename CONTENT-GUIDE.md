@@ -49,6 +49,7 @@ Your site updates about a minute later.
 | **Image description** | For blind readers. See below |
 | **Show on the home page** | Adds it to the "Latest" list. See below |
 | **Hide from the home page** | Keeps it off, even if it's your newest |
+| **Position on the home page** | Forces it to a chosen spot. See below |
 | **Short description** | A sentence or two shown under the entry |
 
 ---
@@ -66,6 +67,23 @@ They appear alongside the automatic newest, most recent first.
 
 If you'd rather something *didn't* appear — a minor piece that happens to be your newest —
 tick **Hide from the home page**. That always wins.
+
+### Putting things in a particular order
+
+Leave **Position on the home page** blank on everything and the list orders itself, as
+above. That's the normal case.
+
+When you want something specific first — a piece you're proud of, or something timely —
+put **1** in that field. Put **2** on the next one, and so on. Numbered pieces lead the
+list in that order, and everything else follows underneath as usual.
+
+A few things worth knowing:
+
+- Numbering a piece **moves** it. It doesn't pull an extra one in behind it.
+- **Hide from the home page** still wins over a position.
+- You only need to number the few you care about. Blank means automatic.
+- If two pieces share a number the site won't break — they'll appear newest first among
+  themselves — but you'll be told, so give them different numbers if the order matters.
 
 ### When two pieces share a year
 

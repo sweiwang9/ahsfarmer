@@ -47,6 +47,8 @@ content:
           description: "The newest item in each section appears automatically. Tick this to show others too." }
       - { name: hidden, label: Hide from the home page, type: boolean, default: false,
           description: "Keeps this out of the home page even if it is the most recent." }
+      - { name: position, label: Position on the home page, type: number,
+          description: "Leave blank for automatic. Put 1 on the piece you want first, 2 on the next, and so on. Numbered pieces lead the list in that order." }
       - { name: note, label: Short description, type: text,
           description: "A sentence or two shown under the entry." }
 
@@ -75,6 +77,8 @@ content:
           description: "The newest item in each section appears automatically. Tick this to show others too." }
       - { name: hidden, label: Hide from the home page, type: boolean, default: false,
           description: "Keeps this out of the home page even if it is the most recent." }
+      - { name: position, label: Position on the home page, type: number,
+          description: "Leave blank for automatic. Put 1 on the piece you want first, 2 on the next, and so on. Numbered pieces lead the list in that order." }
       - { name: note, label: Short description, type: text }
 
   - name: commentary
@@ -104,6 +108,8 @@ content:
           description: "The newest item in each section appears automatically. Tick this to show others too." }
       - { name: hidden, label: Hide from the home page, type: boolean, default: false,
           description: "Keeps this out of the home page even if it is the most recent." }
+      - { name: position, label: Position on the home page, type: number,
+          description: "Leave blank for automatic. Put 1 on the piece you want first, 2 on the next, and so on. Numbered pieces lead the list in that order." }
       - { name: note, label: Short description, type: text }
 
   - name: media
@@ -132,6 +138,8 @@ content:
           description: "The newest item in each section appears automatically. Tick this to show others too." }
       - { name: hidden, label: Hide from the home page, type: boolean, default: false,
           description: "Keeps this out of the home page even if it is the most recent." }
+      - { name: position, label: Position on the home page, type: number,
+          description: "Leave blank for automatic. Put 1 on the piece you want first, 2 on the next, and so on. Numbered pieces lead the list in that order." }
       - { name: note, label: Short description, type: text }
 
   - name: projects
