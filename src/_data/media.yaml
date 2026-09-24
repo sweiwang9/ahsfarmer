@@ -3,8 +3,10 @@
   year: 2026
   date: 29 July 2026
   venue: CASBS, Stanford University
-  url: https://www.youtube.com/watch?v=T-5fbEucRR0
+  url: https://human-centered.simplecast.com/episodes/climate-migration-crises/transcript
   image: /assets/img/casbs-podcast-2026.jpg
+  featured: false
+  hidden: false
   note: Podcast conversation on the legal and policy response to climate-driven
     displacement.
 - title: Women in Refugee Law — Climate Change, Displacement and Gender
@@ -14,6 +16,8 @@
   venue: Women in Refugee Law Network
   url: https://wirl.org.uk/wp-content/uploads/2024/10/WiRL-CC3-Speaker-Biographies.pdf
   image: /assets/img/wirl.svg
+  featured: false
+  hidden: false
 - title: Panel on Conflict, Climate & Displacement
   kind: talk
   year: 2024
@@ -21,6 +25,8 @@
   venue: Duke University
   url: https://climatemigration.duke.edu/policy-impact/panel-on-conflict-climate-displacement/
   image: /assets/img/duke.svg
+  featured: false
+  hidden: false
 - title: "Berger International Speaker Series: International Refugee Norms and
     Their Implementation in the United States"
   kind: talk
@@ -28,6 +34,8 @@
   venue: Cornell Law School
   url: https://vod.video.cornell.edu/media/Berger+International+Speaker+Series+with+Alice+FarmerA+International+Refugee+Norms+and+Their+Implementation+in+the+United+States/1_azleqzlm
   image: /assets/img/cornell.svg
+  featured: false
+  hidden: false
   note: Recorded lecture. Date needs confirming.
 - title: Conversation with Melissa Johns and Alice Farmer of UNHCR
   kind: talk
@@ -35,6 +43,8 @@
   venue: Stanford Law School
   url: https://law.stanford.edu/events-archive/conversation-with-melissa-johns-and-alice-farmer-of-unhcr/
   image: /assets/img/stanford-law.svg
+  featured: false
+  hidden: false
   note: Date needs confirming.
 - title: "Nothing About Us Without Us: Putting Refugees at the Center of Cause
     Lawyering"
@@ -43,6 +53,8 @@
   venue: Harvard Law School International Human Rights Clinic
   url: https://humanrightsclinic.law.harvard.edu/nothing-about-us-without-us-putting-refugees-at-the-center-of-cause-lawyering/
   image: /assets/img/harvard-ihrc.svg
+  featured: false
+  hidden: false
   note: Date needs confirming.
 - title: Global Refugee Issues Forum
   kind: talk
@@ -50,6 +62,8 @@
   venue: St Mark's Episcopal Church, Palo Alto
   url: https://saint-marks.com/event/global-refugee-issues-forum-with-alice-farmer/
   image: /assets/img/st-marks.svg
+  featured: false
+  hidden: false
   note: Date needs confirming.
 - title: "Thailand: Migrant Children Locked Up"
   kind: press
@@ -58,6 +72,8 @@
   venue: Human Rights Watch
   url: https://www.hrw.org/news/2014/09/01/thailand-migrant-children-locked
   image: /assets/img/hrw.svg
+  featured: false
+  hidden: false
   note: '"Migrant children detained in Thailand are suffering needlessly in
     filthy, overcrowded cells."'
 - title: Confronting Refugee Abuse in Indonesia's Detention Centers
@@ -67,6 +83,8 @@
   venue: Human Rights Watch
   url: https://www.hrw.org/news/2013/07/01/confronting-refugee-abuse-indonesias-detention-centers
   image: /assets/img/hrw.svg
+  featured: false
+  hidden: false
 - title: Human Rights Watch Criticizes Indonesia over Treatment of Migrant,
     Asylum-Seeking Children
   kind: press
@@ -75,6 +93,8 @@
   venue: Associated Press
   url: https://www.foxnews.com/world/human-rights-watch-criticizes-indonesia-over-treatment-of-migrant-asylum-seeking-children.amp
   image: /assets/img/ap.svg
+  featured: false
+  hidden: false
 - title: "Indonesia: Children Seeking Refuge Find Abuse, Neglect"
   kind: press
   year: 2013
@@ -82,6 +102,8 @@
   venue: Human Rights Watch
   url: https://www.hrw.org/news/2013/06/24/indonesia-children-seeking-refuge-find-abuse-neglect
   image: /assets/img/hrw.svg
+  featured: false
+  hidden: false
   note: '"Migrant children in Indonesia are trapped in a prolonged waiting game
     with no certain outcome."'
 - title: "Italy: Summary Returns to Greece Violate Rights"
@@ -91,6 +113,8 @@
   venue: Human Rights Watch
   url: https://www.hrw.org/news/2013/01/22/italy-summary-returns-greece-violate-rights
   image: /assets/img/hrw.svg
+  featured: false
+  hidden: false
 - title: "Malta: Migrant Detention Violates Rights"
   kind: press
   year: 2012
@@ -98,5 +122,7 @@
   venue: Human Rights Watch
   url: https://www.hrw.org/news/2012/07/18/malta-migrant-detention-violates-rights
   image: /assets/img/hrw.svg
+  featured: false
+  hidden: false
   note: "\"Malta's automatic, indiscriminate, and blanket detention of migrants is
     inhumane and unnecessary.\""
