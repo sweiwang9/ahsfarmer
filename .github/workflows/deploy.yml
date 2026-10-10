@@ -31,7 +31,7 @@ jobs:
         # Project pages are served from /<repo>/, so assets need that prefix.
         # At custom-domain cutover, change this to "/" and delete this comment.
         env:
-          PATH_PREFIX: /ahsfarmer/
+          PATH_PREFIX: /
         run: npx @11ty/eleventy
       - name: Smoke test the built pages
         run: npm run smoke
