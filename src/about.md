@@ -1,6 +1,10 @@
 ---
 ---
-Alice Hamilton Farmer is an **Associate Professor of Law at the University of Maine** and a
+---
+
+---
+
+Alice Farmer is an **Associate Professor of Law at the University of Maine** and a
 **Senior Adviser for Climate Rights International**. For over a decade she was a lawyer
 with UNHCR, the UN Refugee Agency, in offices around the world including the United States.
 
@@ -31,8 +35,7 @@ and the Law*, forthcoming from Edward Elgar.
 
 ## Teaching
 
-She has lectured on human rights at Harvard Law School, Georgetown University Law Center,
-and the Institut d'études politiques de Paris (Sciences Po).
+She has lectured on human rights at Harvard Law School, Harvard Kennedy School, New York University School of Law, Georgetown University Law Center, and the Institut d'études politiques de Paris (Sciences Po).
 
 ## Education
 
@@ -42,5 +45,5 @@ and the Institut d'études politiques de Paris (Sciences Po).
 
 ## Other
 
-She serves on the board of the Bromley Charitable Trust, an environmental philanthropic
-foundation. She speaks French.
+She serves on the boards of the Bromley Charitable Trust, an environmental philanthropic  
+foundation, and Coexistence Story. She speaks French.
